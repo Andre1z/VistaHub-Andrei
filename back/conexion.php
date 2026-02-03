@@ -1,9 +1,9 @@
 <?php
 // Configuración de la base de datos
 $host = 'localhost'; // Cambia si es necesario
-$usuario = 'root'; // Usuario de la base de datos
-$contraseña = ''; // Contraseña de la base de datos (vacía por defecto en XAMPP)
-$base_datos = 'tu_base_de_datos'; // Nombre de tu base de datos
+$usuario = 'prueba'; // Usuario de la base de datos
+$contraseña = 'prueba123'; // Contraseña de la base de datos (vacía por defecto en XAMPP)
+$base_datos = 'prueba'; // Nombre de tu base de datos
 
 // Crear conexión
 $conexion = new mysqli($host, $usuario, $contraseña, $base_datos);
