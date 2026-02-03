@@ -10,9 +10,9 @@
         <label for="email">Correo Electrónico:</label><br>
         <input type="email" id="email" name="email" required><br><br>
         
-        <label for="password">Contraseña:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
+        <!-- Campo de contraseña removido, se generará al aceptar -->
         
-        <button type="submit">Registrarse</button>
+        <button type="submit">Enviar Solicitud de Registro</button>
+    </form>
 </body>
 </html>
