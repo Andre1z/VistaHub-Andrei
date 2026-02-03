@@ -1,6 +1,6 @@
 <?php
 // Conexión a la DB (igual que arriba)
-$conn = new mysqli("localhost", "root", "", "vistahub");
+$conn = new mysqli("localhost", "prueba", "prueba123", "prueba");
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
