@@ -34,7 +34,7 @@ if (isset($_GET['id'])) { // ID de la solicitud pendiente
             // Enviar correo con la contraseña
             $subject = "Registro Aprobado - Tu Contraseña";
             $message = "Tu registro ha sido aprobado. Tu contraseña es: $password\nInicia sesión con tu email y esta contraseña.";
-            $headers = "From: noreply@vistahub.com"; // Cambia a tu dominio
+            $headers = "From: bugaandrei1@gmail.com"; // Cambia a tu dominio
             
             if (mail($email, $subject, $message, $headers)) {
                 echo "Usuario registrado y correo enviado.";
