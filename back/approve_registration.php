@@ -1,105 +1,175 @@
 <?php
-/* 
-  1. Declaraciones y conexión a la base de datos
-  - Crea la conexión MySQLi con host, usuario, contraseña y base de datos.
-  - Verifica si la conexión falló y detiene la ejecución en caso de error.
-*/
-$conn = new mysqli("localhost", "prueba", "prueba123", "prueba");
+/**
+ * Script completo: usa PHPMailer vía SMTP (configuración proporcionada)
+ * - Conexión MySQLi
+ * - Generación de contraseña temporal
+ * - Inserción en users y actualización de pending_registrations
+ * - Envío de correo vía SMTP usando las credenciales indicadas
+ *
+ * Requisitos:
+ *  - composer require phpmailer/phpmailer
+ *  - extensión openssl habilitada en PHP
+ *  - permisos de escritura en /tmp para logs (opcional)
+ */
+
+date_default_timezone_set('Europe/Madrid');
+
+require 'vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+/* --- Configuración de base de datos --- */
+$dbHost = 'localhost';
+$dbUser = 'prueba';
+$dbPass = 'prueba123';
+$dbName = 'prueba';
+
+$conn = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
 if ($conn->connect_error) {
-    // Si la conexión falla, se muestra el error y se detiene el script.
+    error_log("DB connection error: " . $conn->connect_error);
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-/* 
-  2. Comprobación de parámetro de entrada
-  - Comprueba que el parámetro 'id' viene por GET (identificador de la solicitud pendiente).
-  - Si no existe, no se realiza ninguna acción.
-*/
-if (isset($_GET['id'])) {
-    // Guardar el id recibido (se enlaza como entero más abajo).
-    $id = $_GET['id'];
-    
-    /* 
-      3. Preparar y ejecutar SELECT para obtener el email
-      - Consulta parametrizada para evitar inyección SQL.
-      - Busca la fila con el id dado y estado 'pending'.
-    */
-    $stmt = $conn->prepare("SELECT email FROM pending_registrations WHERE id = ? AND status = 'pending'");
-    $stmt->bind_param("i", $id); // 'i' indica entero
-    $stmt->execute();
-    $result = $stmt->get_result();
-    
-    /* 
-      4. Comprobación del resultado
-      - Si existe la fila (num_rows > 0) se continúa; si no, se informa que no existe o ya fue aprobada.
-    */
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $email = $row['email']; // Email recuperado de la solicitud pendiente
-        
-        /* 
-          5. Generación de contraseña aleatoria
-          - Se genera una contraseña temporal con bin2hex(random_bytes(6)) → 12 caracteres hex.
-          - Nota: los caracteres son hexadecimales (0-9, a-f).
-        */
-        $password = bin2hex(random_bytes(6)); // 12 caracteres hexadecimales
-        
-        /* 
-          6. Hash de la contraseña y registro del usuario
-          - Se hashea la contraseña con password_hash() antes de almacenarla.
-          - Inserta un nuevo registro en la tabla 'users' con email y contraseña hasheada.
-        */
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        $stmt = $conn->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
-        $stmt->bind_param("ss", $email, $hashed_password); // 'ss' = dos strings
-        
-        if ($stmt->execute()) {
-            /* 
-              7. Actualizar el estado de la solicitud
-              - Marca la solicitud como 'approved' para evitar reprocesos.
-              - Se usa otra consulta preparada con el mismo $id.
-            */
-            $stmt = $conn->prepare("UPDATE pending_registrations SET status = 'approved' WHERE id = ?");
-            $stmt->bind_param("i", $id);
-            $stmt->execute();
-            
-            /* 
-              8. Envío de correo con la contraseña
-              - Construye asunto, mensaje y cabeceras básicas.
-              - Usa mail() para enviar el correo; en producción conviene usar PHPMailer u otra librería.
-              - IMPORTANTE: enviar contraseñas en texto plano es inseguro (ver sección de mejoras).
-            */
-            $subject = "Registro Aprobado - Tu Contraseña";
-            $message = "Tu registro ha sido aprobado. Tu contraseña es: $password\nInicia sesión con tu email y esta contraseña.";
-            $headers = "From: bugaandrei1@gmail.com"; // Cambiar por un remitente del dominio
-            
-            if (mail($email, $subject, $message, $headers)) {
-                // Éxito: usuario creado y correo enviado
-                echo "Usuario registrado y correo enviado.";
-            } else {
-                // Usuario creado pero fallo al enviar correo
-                echo "Usuario registrado, pero error al enviar correo.";
-            }
-        } else {
-            // Error al insertar el usuario en la tabla users (p. ej. duplicado)
-            echo "Error al registrar usuario.";
-        }
-    } else {
-        // No existe la solicitud con ese id y estado 'pending'
-        echo "Solicitud no encontrada o ya aprobada.";
-    }
-    
-    /* 
-      9. Cierre de recursos
-      - Cierra el statement activo.
-      - Si se hubieran usado varios statements, conviene cerrarlos individualmente.
-    */
-    $stmt->close();
+/* --- Función de log simple --- */
+function dbg($msg) {
+    file_put_contents('/tmp/registro_debug.log', date('c') . " - " . $msg . PHP_EOL, FILE_APPEND);
 }
 
-/* 
-  10. Cierre de la conexión
-  - Cierra la conexión a la base de datos al finalizar.
-*/
+/* --- Comprobación de parámetro id --- */
+if (!isset($_GET['id'])) {
+    echo "No se proporcionó id.";
+    $conn->close();
+    exit;
+}
+
+$id = (int) $_GET['id'];
+
+/* --- Obtener email pendiente --- */
+$stmt = $conn->prepare("SELECT email FROM pending_registrations WHERE id = ? AND status = 'pending'");
+if (!$stmt) {
+    dbg("Error prepare select: " . $conn->error);
+    die("Error en la consulta.");
+}
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if (!$result || $result->num_rows === 0) {
+    dbg("Solicitud no encontrada o ya aprobada para id: $id");
+    echo "Solicitud no encontrada o ya aprobada.";
+    $stmt->close();
+    $conn->close();
+    exit;
+}
+
+$row = $result->fetch_assoc();
+$email = trim($row['email']);
+dbg("Encontrado email: $email para id: $id");
+
+/* Validar formato básico del email */
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    dbg("Email inválido: $email");
+    echo "Email inválido.";
+    $stmt->close();
+    $conn->close();
+    exit;
+}
+
+/* --- Generar contraseña temporal --- */
+try {
+    $password = bin2hex(random_bytes(6)); // 12 caracteres hex
+} catch (Exception $e) {
+    dbg("Error generando contraseña: " . $e->getMessage());
+    die("Error generando contraseña.");
+}
+
+/* --- Insertar usuario en tabla users --- */
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+$stmt_insert = $conn->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
+if (!$stmt_insert) {
+    dbg("Error prepare insert: " . $conn->error);
+    echo "Error al preparar inserción de usuario.";
+    $stmt->close();
+    $conn->close();
+    exit;
+}
+$stmt_insert->bind_param("ss", $email, $hashed_password);
+$okInsert = $stmt_insert->execute();
+dbg("Insert execute: " . ($okInsert ? 'OK' : 'FAIL') . " - error: " . $stmt_insert->error . " - affected_rows: " . $conn->affected_rows);
+
+if (!$okInsert || $conn->affected_rows <= 0) {
+    echo "Error al registrar usuario.";
+    $stmt_insert->close();
+    $stmt->close();
+    $conn->close();
+    exit;
+}
+
+/* --- Actualizar estado de la solicitud --- */
+$stmt_update = $conn->prepare("UPDATE pending_registrations SET status = 'approved' WHERE id = ?");
+if ($stmt_update) {
+    $stmt_update->bind_param("i", $id);
+    $stmt_update->execute();
+    dbg("Update affected_rows: " . $stmt_update->affected_rows);
+    $stmt_update->close();
+} else {
+    dbg("Error prepare update: " . $conn->error);
+}
+
+/* --- Envío de notificación vía PHPMailer usando SMTP proporcionado --- */
+$mail = new PHPMailer(true);
+
+try {
+    // Configuración SMTP según bloque proporcionado por el usuario
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'vistahub15@gmail.com';
+    // La contraseña de aplicación se ha proporcionado con espacios; eliminamos espacios por seguridad
+    $rawAppPass = 'mirm qxwd sily trfy';
+    $appPass = str_replace(' ', '', $rawAppPass);
+    $mail->Password   = $appPass;
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = 587;
+
+    // Debug a fichero para diagnosticar problemas SMTP
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    $mail->Debugoutput = function($str, $level) {
+        file_put_contents('/tmp/phpmailer_smtp.log', date('c') . " [$level] $str\n", FILE_APPEND);
+    };
+
+    // Opcional temporal para problemas SSL (no recomendado en producción)
+    // $mail->SMTPOptions = [
+    //     'ssl' => [
+    //         'verify_peer' => false,
+    //         'verify_peer_name' => false,
+    //         'allow_self_signed' => true
+    //     ]
+    // ];
+
+    // Remitente solicitado (se fija como Andrei) y destinatario: el email recuperado
+    // Nota: algunos servidores SMTP requieren que Username y From coincidan; si falla, revisa logs en /tmp/phpmailer_smtp.log
+    $mail->setFrom('bugaandrei1@gmail.com', 'Andrei');
+    $mail->addAddress($email);
+
+    // Contenido del correo
+    $mail->isHTML(false);
+    $mail->Subject = 'Registro Aprobado - Tu Contraseña';
+    $mail->Body    = "Tu registro ha sido aprobado. Tu contraseña temporal es: $password\n\nPor favor cambia la contraseña al iniciar sesión.";
+
+    dbg("Intentando enviar correo a $email vía SMTP (usuario: {$mail->Username})");
+    $mail->send();
+    dbg("Envío OK a $email");
+    echo "Usuario registrado y correo enviado.";
+} catch (Exception $e) {
+    dbg("PHPMailer Error: " . $mail->ErrorInfo . " Exception: " . $e->getMessage());
+    echo "Usuario registrado, pero error al enviar correo.";
+}
+
+/* --- Cierre de recursos --- */
+$stmt_insert->close();
+$stmt->close();
 $conn->close();
 ?>
