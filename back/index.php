@@ -24,7 +24,7 @@ $result = $conexion->query($sql);
                 <th>ID</th>
                 <th>Email</th>
                 <th>Fecha de Solicitud</th>
-                <th>Acción</th>
+                <th>Acciones</th>
             </tr>
             <?php while ($row = $result->fetch_assoc()): ?>
                 <tr>
@@ -35,6 +35,7 @@ $result = $conexion->query($sql);
                         <a href="approve_registration.php?id=<?php echo $row['id']; ?>" onclick="return confirm('¿Aprobar esta solicitud?')">Aprobar</a>
                         <a href="reject_registration.php?id=<?php echo $row['id']; ?>" onclick="return confirm('¿Rechazar esta solicitud?')">Rechazar</a>
                     </td>
+                    
                 </tr>
             <?php endwhile; ?>
         </table>
