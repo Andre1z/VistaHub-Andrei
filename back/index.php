@@ -33,6 +33,7 @@ $result = $conexion->query($sql);
                     <td><?php echo $row['created_at']; ?></td>
                     <td>
                         <a href="approve_registration.php?id=<?php echo $row['id']; ?>" onclick="return confirm('¿Aprobar esta solicitud?')">Aprobar</a>
+                        <a href="reject_registration.php?id=<?php echo $row['id']; ?>" onclick="return confirm('¿Rechazar esta solicitud?')">Rechazar</a>
                     </td>
                 </tr>
             <?php endwhile; ?>
