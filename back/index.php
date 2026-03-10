@@ -4,7 +4,7 @@ require 'conexion.php';
 
 // Consultar solicitudes pendientes
 $sql = "SELECT id, email, created_at FROM pending_registrations WHERE status = 'pending'";
-$result = $conn->query($sql);
+$result = $conexion->query($sql);
 ?>
 
 <html lang="es">
@@ -37,6 +37,6 @@ $result = $conn->query($sql);
     <?php else: ?>
         <p>No hay solicitudes pendientes.</p>
     <?php endif; ?>
-    <?php $conn->close(); ?>
+    <?php $conexion->close(); ?>
 </body>
 </html>
