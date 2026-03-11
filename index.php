@@ -8,8 +8,8 @@
     <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
 <body>
-    <img src="assets/vistahub.png" alt="50x50" height="200" width="500">
     <div class="form-container">
+        <img src="assets/vistahub.png" alt="50x50" height="100" width="250">
         <h2>Iniciar sesión</h2>
             <p class="error-message"></p>
             <form method="POST">

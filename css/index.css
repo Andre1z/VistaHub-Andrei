@@ -5,5 +5,78 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom:50px;
     
+}
+.form-container {
+    background: #fff;
+    max-width: 350px;
+    margin: 40px auto;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+.form-container h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-container input[type="email"],
+.form-container input[type="password"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+    outline: none;
+}
+.form-container input[type="email"]:focus,
+.form-container input[type="password"]:focus {
+    border-color: #007bff;
+}
+
+.form-container button[type="submit"] {
+    padding: 12px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.form-container button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+.form-container .error-message {
+    color: #e74c3c;
+    margin-bottom: 10px;
+    min-height: 18px;
+}
+
+.form-container p {
+    margin-top: 18px;
+    color: #555;
+    font-size: 15px;
+}
+.form-container a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.form-container a:hover {
+    text-decoration: underline;
 }
