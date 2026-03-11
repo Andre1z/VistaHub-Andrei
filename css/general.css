@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Arial', sans-serif;
+    font: bold;
+}
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+}
+p{
+    color: #555;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a:hover {
+    text-decoration: underline;
+}
