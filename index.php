@@ -22,9 +22,9 @@
             <button id="ventas"><img src="assets/ventas.svg" alt="Ventas">Ventas</button>
         </div>
         <footer>
-            <h3>Pie de Página</h3>
             <menu>
                 <section id="seccion1">
+                    <h3>Contacto</h3>
                     <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
                     <span class="fi fi-es"></span>
                     <span class="fi fi-eu"></span>
@@ -34,16 +34,19 @@
                     <p>Horario de Atención: <br>Lunes a Viernes, 9:00 - 18:00</p>
                 </section>
                 <section id="seccion2">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <img src="assets/facebook.svg" alt="Facebook" height="40px" width="40px"><p>@VistaHub</p></img>
-                    <img src="assets/twitter.svg" alt="Twitter" height="40px" width="40px"><p>@VistaHub</p></img>
-                    <img src="assets/linkedin.svg" alt="LinkedIn" height="40px" width="40px"><p>@VistaHub</p></img>
+                    <h3>Redes Sociales</h3>
+                    <div class ="seccion2_0">
+                        <img src="assets/facebook.svg" alt="Facebook" height="40px" width="40px">
+                        <p>@VistaHub</p>
+                    </div>
+                    <div class ="seccion2_0">
+                        <img src="assets/twitter.svg" alt="Twitter" height="40px" width="40px">
+                        <p>@VistaHub</p>
+                    </div>
+                    <div class ="seccion2_0">
+                        <img src="assets/linkedin.svg" alt="LinkedIn" height="40px" width="40px">
+                        <p>@VistaHub</p>
+                    </div>
                 </section>
                 <section id="seccion3">
                     <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
