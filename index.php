@@ -34,9 +34,16 @@
                     <p>Horario de Atención: <br>Lunes a Viernes, 9:00 - 18:00</p>
                 </section>
                 <section id="seccion2">
-                    <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
-                    <span class="fi fi-es"></span>
-                    <span class="fi fi-eu"></span>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <img src="assets/facebook.svg" alt="Facebook" height="40px" width="40px"><p>@VistaHub</p></img>
+                    <img src="assets/twitter.svg" alt="Twitter" height="40px" width="40px"><p>@VistaHub</p></img>
+                    <img src="assets/linkedin.svg" alt="LinkedIn" height="40px" width="40px"><p>@VistaHub</p></img>
                 </section>
                 <section id="seccion3">
                     <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
