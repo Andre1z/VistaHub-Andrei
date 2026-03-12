@@ -12,45 +12,47 @@
 <body>
     <h1>Te damos la Bienvenida a Vista Hub</h1>
     <h2>Menú Principal</h2>
-    <div class="form-container">
-        <button id="almacen"><img src="assets/almacen.svg" alt="Almacén">Almacen</button>
-        <button id="logistica"><img src="assets/camion.svg" alt="Logistica">Logistica</button>
-        <button id="compras"><img src="assets/compras.svg" alt="Compras">Compras</button><br>
-        <button id="empleados"><img src="assets/empleados.svg" alt="Empleados">Empleados</button>
-        <button id="tienda"><img src="assets/tienda.svg" alt="Tienda">Tienda</button>
-        <button id="ventas"><img src="assets/ventas.svg" alt="Ventas">Ventas</button>
+    <div class="flex">
+        <div class="form-container">
+            <button id="almacen"><img src="assets/almacen.svg" alt="Almacén">Almacen</button>
+            <button id="logistica"><img src="assets/camion.svg" alt="Logistica">Logistica</button>
+            <button id="compras"><img src="assets/compras.svg" alt="Compras">Compras</button><br>
+            <button id="empleados"><img src="assets/empleados.svg" alt="Empleados">Empleados</button>
+            <button id="tienda"><img src="assets/tienda.svg" alt="Tienda">Tienda</button>
+            <button id="ventas"><img src="assets/ventas.svg" alt="Ventas">Ventas</button>
+        </div>
+        <footer>
+            <h3>Pie de Página</h3>
+            <menu>
+                <section id="seccion1">
+                    <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
+                    <span class="fi fi-es"></span>
+                    <span class="fi fi-eu"></span>
+                </section>
+                <section id="seccion2">
+                    <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
+                    <span class="fi fi-es"></span>
+                    <span class="fi fi-eu"></span>
+                </section>
+                <section id="seccion3">
+                    <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
+                    <span class="fi fi-es"></span>
+                    <span class="fi fi-eu"></span>
+                </section>
+                <section id="seccion4">
+                    <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
+                    <span class="fi fi-es"></span>
+                    <span class="fi fi-eu"></span>
+                </section>
+                <section id="seccion5">
+                    <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
+                    <span class="fi fi-es"></span>
+                    <span class="fi fi-eu"></span>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem expedita itaque consectetur eos natus repellendus? Minima neque blanditiis vitae obcaecati, modi illo numquam ex ipsa? Dolorum voluptatem aut perferendis illo?</p>
+                </section>
+            </menu>
+            <p>&copy; 2026 Vista Hub. Todos los derechos reservados.</p>
+        </footer>
     </div>
-    <footer>
-        <h3>Pie de Página</h3>
-        <menu>
-            <section id="seccion1">
-                <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
-                <span class="fi fi-es"></span>
-                <span class="fi fi-eu"></span>
-            </section>
-            <section id="seccion2">
-                <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
-                <span class="fi fi-es"></span>
-                <span class="fi fi-eu"></span>
-            </section>
-            <section id="seccion3">
-                <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
-                <span class="fi fi-es"></span>
-                <span class="fi fi-eu"></span>
-            </section>
-            <section id="seccion4">
-                <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
-                <span class="fi fi-es"></span>
-                <span class="fi fi-eu"></span>
-            </section>
-            <section id="seccion5">
-                <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
-                <span class="fi fi-es"></span>
-                <span class="fi fi-eu"></span>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem expedita itaque consectetur eos natus repellendus? Minima neque blanditiis vitae obcaecati, modi illo numquam ex ipsa? Dolorum voluptatem aut perferendis illo?</p>
-            </section>
-        </menu>
-        <p>&copy; 2026 Vista Hub. Todos los derechos reservados.</p>
-    </footer>
 </body>
 </html>

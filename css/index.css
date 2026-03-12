@@ -58,6 +58,8 @@ span.fi.fi-es, span.fi.fi-eu{
     margin: 0;
 }
 footer menu{
+    margin-top:100px;
+    margin-bottom:100px;
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -65,6 +67,11 @@ footer menu{
 	align-items: stretch;
 	align-content: stretch;
 }
-/*footer menu #seccion2, #seccion3, #seccion4, #seccion5{
-    margin-left:20px;
-}*/
+.flex{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+}
