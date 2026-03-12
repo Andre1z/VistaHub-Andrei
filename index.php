@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/general.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
 </head>
 <body>
     <h1>Te damos la Bienvenida a Vista Hub</h1>
@@ -22,6 +23,7 @@
     <footer>    
         <p>&copy; 2026 Vista Hub. Todos los derechos reservados.</p>
         <img src="assets/vistahub.png" alt="vistahub" height="125px" width="300px">
+        <span class="fi fi-es"></span>
     </footer>
 </body>
 </html>
