@@ -28,6 +28,10 @@ h2{
     width:200px;
 }
 span.fi.fi-es{
-    height: 150px;
+    height: 100px;
+    width: 300px;
+}
+span.fi.fi-eu{
+    height: 100px;
     width: 300px;
 }

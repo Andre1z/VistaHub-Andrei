@@ -24,6 +24,7 @@
         <p>&copy; 2026 Vista Hub. Todos los derechos reservados.</p>
         <img src="assets/vistahub.png" alt="vistahub" height="125px" width="300px">
         <span class="fi fi-es"></span>
+        <span class="fi fi-eu"></span>
     </footer>
 </body>
 </html>
