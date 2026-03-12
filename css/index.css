@@ -30,9 +30,9 @@ h2{
 }
 footer{
     background-color: #f1f1f1;
-    padding: 20px;
-    height:785px;
     padding: 1rem;
+    min-height: 60px;
+    height: auto;
 }
 
 section{
