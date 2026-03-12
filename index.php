@@ -19,5 +19,9 @@
         <button id="tienda"><img src="assets/tienda.svg" alt="Tienda">Tienda</button>
         <button id="ventas"><img src="assets/ventas.svg" alt="Ventas">Ventas</button>
     </div>
+    <footer>    
+        <p>&copy; 2026 Vista Hub. Todos los derechos reservados.</p>
+        <img src="assets/vistahub.png" alt="vistahub" height="125px" width="300px">
+    </footer>
 </body>
 </html>
