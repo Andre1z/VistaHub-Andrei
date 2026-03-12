@@ -4,6 +4,7 @@ h2{
 }
 .form-container{
     margin-left:550px;
+    margin-bottom: 86px;
 }
 .form-container button{
     position:center;
@@ -27,6 +28,15 @@ h2{
     height:200px;
     width:200px;
 }
+footer{
+    position:sticky;
+    background-color: #f1f1f1;
+    padding: 20px;
+    height:500px;
+}
+footer p{
+    position:absolute;
+}
 footer img, span{
     display: flex;
 	flex-direction: row;
@@ -47,3 +57,14 @@ span.fi.fi-es, span.fi.fi-eu{
     display: inline-block;
     margin: 0;
 }
+footer menu{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: stretch;
+}
+/*footer menu #seccion2, #seccion3, #seccion4, #seccion5{
+    margin-left:20px;
+}*/
