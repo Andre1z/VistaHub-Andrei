@@ -16,6 +16,19 @@
             <form method="POST">
             <input type="email" name="username" placeholder="Email" required>
             <input type="password" name="password" placeholder="Contraseña" required>
+            <label for="lenguages">Idiomas</label>
+            <select id="lenguages" name="language" required>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="ru">Русский</option>
+                <option value="pt">Português</option>
+                <option value="it">Italiano</option>
+                <option value="pl">Polski</option>
+                <option value="el">Ελληνικά</option>
+                <option value="ar">العربية</option>
+            </select>
             <button type="submit">Entrar</button>
         </form>
         <p>¿No tiene cuenta? <a href="register.php">Regístrate aquí</a></p>
