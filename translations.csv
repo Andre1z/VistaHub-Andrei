@@ -1,0 +1,24 @@
+key,english,spanish,french,german,russian,portuguese,italian,polish,greek,arabic
+welcome,Vista Hub,Te damos la Bienvenida a Vista Hub,Hub de Vue,Bienvenue à Vista Hub,Willkommen bei Vista Hub,Добро пожаловать в Vista Hub,Bem-vindo ao Vista Hub,Benvenuto a Vista Hub,Witamy w Vista Hub,Καλώς ήρθατε στο Vista Hub,مرحبا بك في Vista Hub
+main_menu,Main Menu,Menú Principal,Menu Principal,Menü Haupt,Главное меню,Menu Principal,Menu Principale,Menu Główny,Κύριο Μενού,القائمة الرئيسية
+contact,Contact,Contacto,Contact,Kontakt,Контакт,Contato,Contatto,Kontakt,Επικοινωνία,اتصل
+social_networks,Social Networks,Redes Sociales,Réseaux Sociaux,Soziale Netzwerke,Социальные сети,Redes Sociais,Reti Sociali,Sieci Społeczne,Κοινωνικά Δίκτυα,شبكات التواصل الاجتماعي
+legal_notice,Legal Notice,Aviso Legal,Avis légal,Rechtlicher Hinweis,Юридическое уведомление,Aviso Legal,Avviso legale,Nota prawna,Νομική ειδοποίηση,إشعار قانوني
+language_selection,Language Selection,Seleccion de Idiomas,Sélection de la langue,Sprachauswahl,Выбор языка,Seleção de idioma,Selezione della lingua,Wybór języka,Επιλογή γλώσσας,اختيار اللغة
+warehouse,Warehouse,Almacén,Entrepôt,Lager,Склад,Armazém,Magazzino,Magazyn,Αποθήκη,مخزن
+logistics,Logistics,Logistica,Logistique,Logistik,Логистика,Logística,Logistica,Logistyka,Λογιστική,الخدمات اللوجستية
+purchases,Purchases,Compras,Achats,Einkäufe,Покупки,Compras,Acquisti,Zakupy,Αγορές,مشتريات
+employees,Employees,Empleados,Employés,Mitarbeiter,Сотрудники,Empregados,Impiegati,Pracownicy,Υπάλληλοι,موظفون
+store,Store,Tienda,Magasin,Geschäft,Магазин,Loja,Negozio,Sklep,Κατάστημα,متجر
+sales,Sales,Ventas,Ventes,Verkäufe,Продажи,Vendas,Vendite,Sprzedaż,Πωλήσεις,مبيعات
+login,Login,Iniciar sesión,Connexion,Anmeldung,Вход,Entrar,Accedi,Zaloguj się,Σύνδεση,تسجيل الدخول
+email,Email,Email,Email,E-Mail,Электронная почта,Email,Email,Email,Email,البريد الإلكتروني
+password,Password,Contraseña,Mot de passe,Passwort,Пароль,Senha,Password,Hasło,Κωδικός,كلمة المرور
+enter,Enter,Entrar,Entrer,Eintreten,Войти,Entrar,Entra,Wejdź,Εισάγετε,ادخل
+no_account,No account?,¿No tiene cuenta?,Pas de compte?,Kein Konto?,Нет аккаунта?,Não tem conta?,Nessun account?,Nie masz konta?,Δεν έχετε λογαριασμό؟,لا يوجد حساب؟
+register_here,Register here,Regístrate aquí,Inscrivez-vous ici,Hier registrieren,Зарегистрируйтесь здесь,Cadastre-se aqui,Registrati qui,Zarejestruj się tutaj,Εγγραφείτε εδώ,سجل هنا
+user_registration,User Registration,Registro de Usuarios,Inscription des utilisateurs,Benutzerregistrierung,Регистрация пользователей,Registro de Usuários,Registrazione utenti,Rejestracja użytkowników,Εγγραφή χρηστών,تسجيل المستخدمين
+submit_registration,Submit Registration,Enviar Solicitud de Registro,Envoyer l'inscription,Registrierung absenden,Отправить регистрацию,Enviar registro,Invia registrazione,Wyślij rejestrację,Υποβολή εγγραφής,إرسال التسجيل
+pending_requests,Pending Registration Requests,Solicitudes de Registro Pendientes,Requêtes d'inscription en attente,Ausstehende Registrierungsanfragen,Ожидающие регистрации,Pedidos de registro pendentes,Richieste di registrazione in sospeso,Oczekujące prośby o rejestrację,Εκκρεμείς αιτήσεις εγγραφής,طلبات التسجيل المعلقة
+approve,Approve,Aprobar,Approuver,Genehmigen,Одобрить,Aprovar,Approvare,Zatwierdź,Έγκριση,وافق
+reject,Reject,Rechazar,Rejeter,Ablehnen,Отклонить,Rejeitar,Respinge,Rozrzuć,Απόρριψη,رفض
