@@ -13,8 +13,6 @@
         <input type="text" id="CIF" name="CIF" required><br>
         <label for="SOCIAL">Nombre o Razón Social:</label><br>
         <input type="text" id="SOCIAL" name="SOCIAL" required><br>
-        <label for="NIF">NIF/NIE/PASAPORTE:</label><br>
-        <input type="text" id="NIF" name="NIF" required><br>
         <label for="DOMICILIO">Domicilio:</label><br>
         <input type="text" id="DOMICILIO" name="DOMICILIO" required><br>
         <label for="MUNICIPIO">Municipio:</label><br>
