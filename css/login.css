@@ -38,6 +38,25 @@ img{
     transition: border-color 0.2s;
     outline: none;
 }
+
+.form-container label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+    padding-left: 2px;
+}
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+    outline: none;
+}
 .form-container input[type="email"]:focus,
 .form-container input[type="password"]:focus {
     border-color: #007bff;
