@@ -79,6 +79,43 @@ span.fi.fi-es, span.fi.fi-eu{
     display: inline-block;
     margin: 0;
 }
+/**/
+span.fi.fi-gb{
+    height: 75px;
+    width: 75px;
+}
+span.fi.fi-fr{
+    height: 75px;
+    width: 75px;
+}
+span.fi.fi-pt{
+    height: 75px;
+    width: 75px;
+}
+span.fi.fi-de{
+    height: 75px;
+    width: 75px;
+}
+span.fi.fi-it{
+    height: 75px;
+    width: 75px;
+}
+span.fi.fi-pl{
+    height: 75px;
+    width: 75px;
+}
+span.fi.fi-gr{
+    height: 75px;
+    width: 75px;
+}
+span.fi.fi-ru{
+    height: 75px;
+    width: 75px;
+}
+span.fi.fi-sa{
+    height: 75px;
+    width: 75px;
+}
 footer menu{
     margin-top:100px;
     margin-bottom:100px;

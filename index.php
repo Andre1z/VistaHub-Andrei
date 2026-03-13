@@ -37,35 +37,35 @@
                     <h3>Redes Sociales</h3>
                     <div class ="seccion2_0">
                         <img src="assets/facebook.svg" alt="Facebook" height="40px" width="40px">
-                        <p>@VistaHub</p>
+                        <a href="https://www.facebook.com/VistaHub290" target="_blank"><p>@VistaHub290</p></a>
                     </div>
                     <div class ="seccion2_0">
                         <img src="assets/twitter.svg" alt="Twitter" height="40px" width="40px">
-                        <p>@VistaHub</p>
+                        <a href="https://twitter.com/VistaHub290" target="_blank"><p>@VistaHub290</p></a>
                     </div>
                     <div class ="seccion2_0">
                         <img src="assets/linkedin.svg" alt="LinkedIn" height="40px" width="40px">
-                        <p>@VistaHub</p>
+                        <a href="https://www.linkedin.com/company/vistahub290" target="_blank"><p>@VistaHub290</p></a>
                     </div>
                 </section>
                 <section id="seccion3">
-                    <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
-                    <span class="fi fi-es"></span>
-                    <span class="fi fi-eu"></span>
+                    <h3>Aviso Legal</h3>
+                    <p>© 2026 VistaHub. Todos los derechos reservados. El contenido de este sitio web es propiedad de VistaHub y está protegido por las leyes de propiedad intelectual. Queda prohibida la reproducción total o parcial sin autorización previa. VistaHub no se hace responsable por el uso indebido de la información aquí contenida. Para consultas legales o privacidad, contáctanos</p>
                 </section>
                 <section id="seccion4">
-                    <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
-                    <span class="fi fi-es"></span>
-                    <span class="fi fi-eu"></span>
-                </section>
-                <section id="seccion5">
-                    <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
-                    <span class="fi fi-es"></span>
-                    <span class="fi fi-eu"></span>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem expedita itaque consectetur eos natus repellendus? Minima neque blanditiis vitae obcaecati, modi illo numquam ex ipsa? Dolorum voluptatem aut perferendis illo?</p>
+                    <h3>Seleccion de Idiomas</h3>
+                    <button><span class="fi fi-gb"></span></button>
+                    <button><span class="fi fi-fr"></span></button>
+                    <button><span class="fi fi-es"></span></button>
+                    <button><span class="fi fi-pt"></span></button>
+                    <button><span class="fi fi-de"></span></button>
+                    <button><span class="fi fi-it"></span></button>
+                    <button><span class="fi fi-pl"></span></button>
+                    <button><span class="fi fi-gr"></span></button>
+                    <button><span class="fi fi-ru"></span></button>
+                    <button><span class="fi fi-sa"></span></button>
                 </section>
             </menu>
-            <p>&copy; 2026 Vista Hub. Todos los derechos reservados.</p>
         </footer>
     </div>
 </body>
