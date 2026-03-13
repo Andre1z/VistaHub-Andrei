@@ -4,18 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" type="text/css" href="css/register.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
 <body>
     <h1>Registro de Usuarios</h1>
     <form method="POST" action="back/register_user.php">
         <label for="CIF">CIF/NIF/NIE:</label><br>
         <input type="text" id="CIF" name="CIF" required><br>
-        <label for="name">Nombre Completo:</label><br>
-        <input type="text" id="name" name="name" required><br>
-        <label for="NIF">NIF/NIE/PASAPORTE:</label><br>
-        <input type="text" id="NIF" name="NIF" required><br>
         <label for="SOCIAL">Nombre o Razón Social:</label><br>
         <input type="text" id="SOCIAL" name="SOCIAL" required><br>
+        <label for="NIF">NIF/NIE/PASAPORTE:</label><br>
+        <input type="text" id="NIF" name="NIF" required><br>
         <label for="DOMICILIO">Domicilio:</label><br>
         <input type="text" id="DOMICILIO" name="DOMICILIO" required><br>
         <label for="MUNICIPIO">Municipio:</label><br>
