@@ -3,7 +3,7 @@
 require 'conexion.php';
 
 // Consultar solicitudes pendientes
-$sql = "SELECT id, email, created_at FROM pending_registrations WHERE status = 'pending'";
+$sql = "SELECT id, id_empresa, email, created_at FROM pending_registrations WHERE status = 'pending'";
 $result = $conexion->query($sql);
 ?>
 
@@ -22,6 +22,7 @@ $result = $conexion->query($sql);
         <table border="1">
             <tr>
                 <th>ID</th>
+                <th>Empresa</th>
                 <th>Email</th>
                 <th>Fecha de Solicitud</th>
                 <th>Acciones</th>
@@ -29,6 +30,7 @@ $result = $conexion->query($sql);
             <?php while ($row = $result->fetch_assoc()): ?>
                 <tr>
                     <td><?php echo $row['id']; ?></td>
+                    <td><?php echo $row['id_empresa']; ?></td>
                     <td><?php echo $row['email']; ?></td>
                     <td><?php echo $row['created_at']; ?></td>
                     <td>
