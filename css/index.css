@@ -116,6 +116,9 @@ span.fi.fi-sa{
     height: 75px;
     width: 75px;
 }
+#seccion4 button{
+    border:none;
+}
 footer menu{
     margin-top:100px;
     margin-bottom:100px;
