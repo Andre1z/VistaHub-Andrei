@@ -25,7 +25,8 @@
         <input type="email" id="email" name="email" required><br><br>
         <label for="phone">Teléfono:</label><br>
         <input type="text" id="phone" name="phone" required><br><br>
-        
+        <label for="privacity">Acuerdo de Privacidad:</label><br>
+        <input type="checkbox" id="privacity" name="privacity" required>He leído y acepto la <span><a href="privacidad.html" target="_blank">política de privacidad</a></span>.<br><br>
         <button type="submit">Enviar Solicitud de Registro</button>
     </form>
 </body>
