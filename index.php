@@ -1,3 +1,17 @@
+<?php 
+    // Verificamos si la sesión ya está iniciada
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    // Verificamos si el usuario ha iniciado sesión
+    /*if (!isset($_SESSION['user_id'])) {
+        header("Location: login.php");
+        exit();
+    }
+
+    $username = isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : "Invitado";*/
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
