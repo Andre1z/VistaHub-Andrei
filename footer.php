@@ -31,16 +31,16 @@
         </section>
         <section id="seccion4">
             <h3>Seleccion de Idiomas</h3>
-            <button><span class="fi fi-gb"></span></button>
-            <button><span class="fi fi-fr"></span></button>
-            <button><span class="fi fi-es"></span></button>
-            <button><span class="fi fi-pt"></span></button>
-            <button><span class="fi fi-de"></span></button>
-            <button><span class="fi fi-it"></span></button>
-            <button><span class="fi fi-pl"></span></button>
-            <button><span class="fi fi-gr"></span></button>
-            <button><span class="fi fi-ru"></span></button>
-            <button><span class="fi fi-sa"></span></button>
+            <button class ="gb"><span class="fi fi-gb"></span></button>
+            <button class ="fr"><span class="fi fi-fr"></span></button>
+            <button class ="es"><span class="fi fi-es"></span></button>
+            <button class ="pt"><span class="fi fi-pt"></span></button>
+            <button class ="de"><span class="fi fi-de"></span></button>
+            <button class ="it"><span class="fi fi-it"></span></button>
+            <button class ="pl"><span class="fi fi-pl"></span></button>
+            <button class ="gr"><span class="fi fi-gr"></span></button>
+            <button class ="ru"><span class="fi fi-ru"></span></button>
+            <button class ="sa"><span class="fi fi-sa"></span></button>
         </section>
     </menu>
 </footer>
