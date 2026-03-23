@@ -25,8 +25,6 @@
         <input type="email" id="email" name="email" required><br><br>
         <label for="phone">Teléfono:</label><br>
         <input type="text" id="phone" name="phone" required><br><br>
-
-        <!-- Campo de contraseña removido, se generará al aceptar -->
         
         <button type="submit">Enviar Solicitud de Registro</button>
     </form>
