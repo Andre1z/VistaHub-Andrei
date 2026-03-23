@@ -1,0 +1,23 @@
+/* Estilos exclusivos para privacidad.html */
+
+body {
+	background: #f7f8fa;
+	margin: 0;
+	min-height: 100vh;
+}
+
+.privacidad-container {
+	max-width: 700px;
+	margin: 40px auto 0 auto;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+	padding: 36px 32px 32px 32px;
+}
+
+@media (max-width: 800px) {
+	.privacidad-container {
+		max-width: 98vw;
+		padding: 18px 6vw 18px 6vw;
+	}
+}
