@@ -8,9 +8,7 @@
     /*if (!isset($_SESSION['user_id'])) {
         header("Location: login.php");
         exit();
-    }
-
-    $username = isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : "Invitado";*/
+    }*/
 ?>
 <!DOCTYPE html>
 <html lang="es">
