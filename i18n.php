@@ -1,5 +1,5 @@
 <?php
-function obtenerTraducciones($idioma = 'en') {
+function obtenerTraducciones($idioma = 'es') {
     $traducciones = array();
     // Se intenta abrir el archivo CSV con las traducciones.
     if (($archivo = fopen("translations.csv", "r")) !== false) {
@@ -26,11 +26,11 @@ function obtenerTraducciones($idioma = 'en') {
     return $traducciones;
 }
 
-// Determina el idioma activo a partir de la sesión; si no está definido, se usa inglés ('en').
+// Determina el idioma activo a partir de la sesión; si no está definido, se usa español ('es').
 if (isset($_SESSION['language'])) {
     $idiomaActivo = $_SESSION['language'];
 } else {
-    $idiomaActivo = 'en';
+    $idiomaActivo = 'es';
 }
 $GLOBALS['idiomaActivo'] = $idiomaActivo;
 $GLOBALS['conjuntoTraducciones'] = obtenerTraducciones($idiomaActivo);
