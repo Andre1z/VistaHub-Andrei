@@ -6,7 +6,7 @@
             <span class="fi fi-es"></span>
             <span class="fi fi-eu"></span>
             <p>Email: info@vistahub.com</p>
-            <p>Teléfono: +34 91 123 45 67</p>
+            <p>Teléfono: +34 911 23 45 67</p>
             <p>Dirección: <br>C/ Ejemplo, 123 - 28001 Madrid</p>
             <p>Horario de Atención: <br>Lunes a Viernes, 9:00 - 18:00</p>
         </section>
