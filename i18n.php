@@ -9,7 +9,7 @@ function obtenerTraducciones($idioma = 'es') {
         while (($linea = fgetcsv($archivo, 1000, ",")) !== false) {
             $clave = $linea[0];
             $traducciones[$clave] = array(
-                'en' => $linea[1],
+                'gb' => $linea[1],
                 'es' => $linea[2],
                 'fr' => $linea[3],
                 'de' => $linea[4],
@@ -17,8 +17,8 @@ function obtenerTraducciones($idioma = 'es') {
                 'pt' => $linea[6],
                 'it' => $linea[7],
                 'pl' => $linea[8],
-                'el' => $linea[9],
-                'ar' => $linea[10]
+                'gr' => $linea[9],
+                'sa' => $linea[10]
             );
         }
         fclose($archivo);
