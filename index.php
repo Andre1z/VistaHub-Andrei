@@ -28,6 +28,5 @@
         <?php include 'footer.php'; ?>
     </div>
     <script src="scr/main.js"></script>
-    <script src="scr/footer.js"></script>
 </body>
 </html>

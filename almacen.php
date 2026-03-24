@@ -1,3 +1,6 @@
+<?php 
+    require 'back/conexion.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

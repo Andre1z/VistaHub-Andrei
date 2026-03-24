@@ -45,4 +45,5 @@
             <button id ="sa"><span class="fi fi-sa"></span></button>
         </section>
     </menu>
+    <script src="scr/footer.js"></script>
 </footer>
