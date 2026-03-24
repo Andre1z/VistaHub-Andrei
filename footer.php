@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/footer.css">
 <footer>
     <menu>
         <section id="seccion1">
