@@ -9,6 +9,7 @@
     <title>Vista Hub - Almacen</title>
     <link rel="stylesheet" type="text/css" href="css/general.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
 </head>
 <body>
     <header>

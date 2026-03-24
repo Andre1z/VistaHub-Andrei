@@ -1,0 +1,25 @@
+header{
+    background-color: #868686;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+header nav{
+    display:inline-block;
+	vertical-align:top;
+}
+header nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+header nav ul li{
+    display:inline-block;
+	margin:0px 12px;
+	line-height:44px;
+	font-size:12px;
+}
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+}
