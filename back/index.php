@@ -17,7 +17,7 @@ $result = $conexion->query($sql);
     <link rel="icon" type="image/png" href="../assets/logo.png">
 </head>
 <body>
-    <h1>Solicitudes de Registro Pendientes</h1>
+    <h2>Solicitudes de Registro Pendientes</h2>
     <?php if ($result->num_rows > 0): ?>
         <table border="1">
             <tr>
