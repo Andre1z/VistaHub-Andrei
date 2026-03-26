@@ -1,5 +1,5 @@
 <?php 
-    require 'back/conexion.php';
+    //require 'back/conexion.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
