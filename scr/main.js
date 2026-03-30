@@ -25,3 +25,12 @@ document.getElementById('productos').addEventListener('click', function() {
 document.getElementById('acercade').addEventListener('click', function() {
     window.location.href = 'acerca_de.php';
 });
+document.getElementById('manual').addEventListener('click', function() {
+    window.location.href = 'manual.php';
+});
+document.getElementById('salir').addEventListener('click', function() {
+    window.location.href = 'logout.php';
+});
+document.getElementById('proveedores').addEventListener('click', function() {
+    window.location.href = 'proveedores.php';
+});
