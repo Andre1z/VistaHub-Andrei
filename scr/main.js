@@ -29,7 +29,7 @@ document.getElementById('manual').addEventListener('click', function() {
     window.location.href = 'manual.php';
 });
 document.getElementById('salir').addEventListener('click', function() {
-    window.location.href = 'logout.php';
+    window.location.href = 'back/logout.php';
 });
 document.getElementById('proveedores').addEventListener('click', function() {
     window.location.href = 'proveedores.php';
