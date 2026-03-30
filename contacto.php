@@ -11,7 +11,7 @@
 <body>
     <?php include 'header.php'; ?>
     <h2>Contacto</h2>
-    <p>Nos puede contactar a traves de este telefono movil: +34 911 23 45 67 o mediante este formulario:</p>
+    <p>Nos puede contactar a traves de este telefono movil: <a href="tel:+34911234567">+34 911 23 45 67</a> o mediante este formulario:</p>
     <form action="contacto_procesar.php" method="post" class="contact-form">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>

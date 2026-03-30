@@ -7,8 +7,8 @@
             <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
             <span class="fi fi-es"></span>
             <span class="fi fi-eu"></span>
-            <p>Email: info@vistahub.com</p>
-            <p>Teléfono: +34 911 23 45 67</p>
+            <p>Email: <a href="mailto:info@vistahub.com">info@vistahub.com</a></p>
+            <p>Teléfono: <a href="tel:+34911234567">+34 911 23 45 67</a></p>
             <p>Dirección: <br>C/ de Caracas, 21 - 28010 Madrid</p>
             <p>Horario de Atención: <br>Lunes a Viernes, 9:00 - 18:00</p>
         </section>
