@@ -42,3 +42,34 @@ a:hover {
     text-decoration: underline;
     color: #2980b9;
 }
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+        max-width: 100%;
+    }
+    h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    main p {
+        font-size: 1em;
+    }
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    main p {
+        font-size: 0.9em;
+    }
+}

@@ -67,9 +67,28 @@ label{
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .contact-form {
         padding: 15px;
         margin: 10px;
+        max-width: 90%;
+    }
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .contact-form button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        padding: 10px;
+        margin: 5px;
+        max-width: 95%;
     }
 }

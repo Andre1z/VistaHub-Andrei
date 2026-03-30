@@ -86,3 +86,33 @@ select {
 .form-container p {
     margin-top: 18px;
 }
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .form-container {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 20px 15px;
+    }
+    .form-container input[type="email"],
+    .form-container input[type="password"],
+    select {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .form-container button[type="submit"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        width: 80%;
+        height: auto;
+    }
+    .form-container {
+        max-width: 95%;
+        padding: 15px 10px;
+    }
+}

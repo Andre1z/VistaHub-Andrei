@@ -48,6 +48,32 @@ span.fi.fi-eu{
 span.fi.fi-es, span.fi.fi-eu{
     display: inline-block;
     margin: 0;
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .seccion2_0 {
+        flex-direction: column;
+        align-items: center;
+    }
+    section {
+        width: 100%;
+        text-align: center;
+    }
+    span.fi.fi-es, span.fi.fi-eu {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 0.5rem;
+    }
+    span.fi.fi-es, span.fi.fi-eu {
+        height: 40px;
+        width: 40px;
+    }
+}
 }
 /**/
 span.fi.fi-gb{

@@ -7,8 +7,12 @@ h3{
     text-align:center;
 }
 .form-container{
-    margin-left:550px;
+    margin: 0 auto;
     margin-bottom: 86px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .form-container button{
     position:center;
@@ -31,4 +35,35 @@ h3{
     display: block;
     height:200px;
     width:200px;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .form-container {
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: 100%;
+    }
+    .form-container button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+    .form-container img {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 24px !important;
+    }
+    .form-container button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    .form-container img {
+        height: 120px;
+        width: 120px;
+    }
 }

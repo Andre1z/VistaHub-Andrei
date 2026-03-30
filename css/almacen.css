@@ -2,3 +2,16 @@ h2{
     text-align: center;
     font-size:30px !important;
 }
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 24px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px !important;
+    }
+}

@@ -23,10 +23,11 @@ header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 header nav ul li {
-    display: inline-block;
     margin: 0 16px;
     line-height: 44px;
     font-size: 15px;
@@ -45,4 +46,27 @@ header nav ul li a:hover, header nav ul li a:focus {
     color: #F4F6F8;
     text-decoration: underline;
     background: rgba(255,255,255,0.08);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    header .brand, header .logo {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px 0;
+    }
+    header nav ul li {
+        font-size: 14px;
+    }
 }
