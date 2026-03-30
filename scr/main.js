@@ -16,3 +16,12 @@ document.getElementById('empleados').addEventListener('click', function() {
 document.getElementById('tienda').addEventListener('click', function() {
     window.location.href = 'tienda.php';
 });
+document.getElementById('clientes').addEventListener('click', function() {
+    window.location.href = 'clientes.php';
+});
+document.getElementById('productos').addEventListener('click', function() {
+    window.location.href = 'productos.php';
+});
+document.getElementById('manual').addEventListener('click', function() {
+    window.location.href = 'manual.php';
+});
