@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vista Hub - Contacto</title>
     <link rel="stylesheet" type="text/css" href="css/general.css">
+    <link rel="stylesheet" type="text/css" href="css/contacto.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
 <body>
     <?php include 'header.php'; ?>    
     <h2>Contacto</h2>
-    <form action="contacto_procesar.php" method="post">
+    <form action="contacto_procesar.php" method="post" class="contact-form">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <label for="email">Email:</label>
@@ -19,5 +20,6 @@
         <textarea id="mensaje" name="mensaje" required></textarea>
         <button type="submit">Enviar</button>
     </form>
+    <?php include 'footer.php'; ?>
 </body>
 </html>
