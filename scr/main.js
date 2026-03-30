@@ -22,6 +22,6 @@ document.getElementById('clientes').addEventListener('click', function() {
 document.getElementById('productos').addEventListener('click', function() {
     window.location.href = 'productos.php';
 });
-document.getElementById('manual').addEventListener('click', function() {
-    window.location.href = 'manual.php';
+document.getElementById('acercade').addEventListener('click', function() {
+    window.location.href = 'acerca_de.php';
 });
