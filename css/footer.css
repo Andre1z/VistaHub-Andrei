@@ -75,6 +75,9 @@ span.fi.fi-es, span.fi.fi-eu{
     }
 }
 }
+footer a:hover{
+    text-decoration: none;
+}
 /**/
 span.fi.fi-gb{
     height: 75px;
