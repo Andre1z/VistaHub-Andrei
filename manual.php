@@ -35,6 +35,10 @@
     <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder gestionar a tus empleados de manera eficiente.</p>
     <img src="assets/empleados_mantenimiento.png" alt="">
     <br>
+    <h3>6. Gestión de Clientes</h3>
+    <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder gestionar a tus clientes de manera eficiente.</p>
+    <img src="assets/clientes_mantenimiento.png" alt="">
+    <br>
     <?php include 'footer.php'; ?>
 </body>
 </html>
