@@ -10,6 +10,7 @@
 <body>
     <?php include 'header.php'; ?>
     <h2>Tienda</h2>
+    <p>⚠️EN MANTENIMIENTO⚠️</p>
     <?php include 'footer.php'; ?>
 </body>
 </html>

@@ -14,6 +14,7 @@
 <body>
     <?php include 'header.php'; ?>
     <h2>Almacen</h2>
+    <p>⚠️EN MANTENIMIENTO⚠️</p>
     <?php include 'footer.php'; ?>
 </body>
 </html>
