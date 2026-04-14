@@ -9,6 +9,9 @@
 <img src="assets/menu_principal1.png" alt="">
 <img src="assets/menu_principal2.png" alt="">
 <br>
+<h3>3. Navegación por las diferentes páginas</h3>
+<p>En el menú de arriba encontrarás las diferentes opciones para navegar por las diferentes páginas.</p>
+<img src="assets/navegacion.png" alt="">
 <h3>3. Gestión de Almacén</h3>
 <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder gestionar tu almacén de manera eficiente.</p>
 <img src="assets/almacen_mantenimiento.png" alt="">
