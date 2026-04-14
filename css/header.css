@@ -44,7 +44,7 @@ header nav ul li a {
 
 header nav ul li a:hover, header nav ul li a:focus {
     color: #F4F6F8;
-    text-decoration: underline;
+    text-decoration: none;
     background: rgba(255,255,255,0.08);
 }
 
