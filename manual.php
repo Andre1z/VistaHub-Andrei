@@ -15,8 +15,13 @@
     <h3>1. Registro e Inicio de Sesión</h3>
     <p>Para comenzar a utilizar Vista Hub, primero debes registrarte. Haz clic en el botón "Registrarse" en la esquina superior derecha de la página de inicio. Completa el formulario con los datos requeridos. Una vez enviado el formulario se debera esperar un rato para que se validen los datos y le enviemos un correo con la contraseña temporal despues, podrá iniciar sesión con tus credenciales.</p>
     <img src="assets/registro_aqui.png" alt="Registro" height="600px" width="390px">
-    <img src="assets/registro_campos1.png" alt="" height="600px" width="390px">
-    <img src="assets/registro_campos2.png" alt="" height="600px" width="390px">
+    <img src="assets/registro_campos1.png" alt="" height="600px" width="420px">
+    <img src="assets/registro_campos2.png" alt="" height="600px" width="420px">
+    <br>
+    <h3>2. Navegación por la Plataforma</h3>
+    <p>Una vez que hayas iniciado sesión, serás dirigido a tu panel de control. Aquí podrás acceder a todas las funcionalidades de Vista Hub, como la gestión de sus productos, la gestion de su flota y la configuración de su tienda.</p>
+    <img src="assets/menu_principal1.png" alt="">
+    <img src="assets/menu_principal2.png" alt="">
     <?php include 'footer.php'; ?>
 </body>
 </html>
