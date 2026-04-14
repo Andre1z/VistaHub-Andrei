@@ -13,6 +13,10 @@
 <p>En el menú de arriba encontrarás las diferentes opciones para navegar por las diferentes páginas.</p>
 <img src="assets/navegacion.png" alt="">
 <br>
+<h3>4. El Pie de Pagina</h3>
+<p>En el pie de pagina encontraras información de la empresa, redes sociales de la empresa, el aviso legal y un selector de idiomas.</p>
+<img src="assets/pie_de_pagina.png" alt="">
+<br>
 <h3>3. Gestión de Almacén</h3>
 <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder gestionar tu almacén de manera eficiente.</p>
 <img src="assets/almacen_mantenimiento.png" alt="">
