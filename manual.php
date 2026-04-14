@@ -22,6 +22,10 @@
     <p>Una vez que hayas iniciado sesión, serás dirigido a tu panel de control. Aquí podrás acceder a todas las funcionalidades de Vista Hub, como la gestión de sus productos, la gestion de su flota y la configuración de su tienda.</p>
     <img src="assets/menu_principal1.png" alt="">
     <img src="assets/menu_principal2.png" alt="">
+    <br>
+    <h3>3. Gestión de Almacén</h3>
+    <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder gestionar tu almacén de manera eficiente.</p>
+    <img src="assets/almacen_mantenimiento.png" alt="">
     <?php include 'footer.php'; ?>
 </body>
 </html>
