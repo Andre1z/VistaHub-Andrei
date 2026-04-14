@@ -18,7 +18,7 @@
     <img src="assets/registro_campos1.png" alt="" height="600px" width="420px">
     <img src="assets/registro_campos2.png" alt="" height="600px" width="420px">
     <br>
-    <h3>2. Navegación por la Plataforma</h3>
+    <h3>2. Navegación por la página principal</h3>
     <p>Una vez que hayas iniciado sesión, serás dirigido a tu panel de control. Aquí podrás acceder a todas las funcionalidades de Vista Hub, como la gestión de sus productos, la gestion de su flota y la configuración de su tienda.</p>
     <img src="assets/menu_principal1.png" alt="">
     <img src="assets/menu_principal2.png" alt="">
