@@ -39,6 +39,10 @@
     <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder gestionar a tus clientes de manera eficiente.</p>
     <img src="assets/clientes_mantenimiento.png" alt="">
     <br>
+    <h3>7. Gestión de Compras</h3>
+    <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder gestionar tus compras de manera eficiente.</p>
+    <img src="assets/compras_mantenimiento.png" alt="">
+    <br>
     <?php include 'footer.php'; ?>
 </body>
 </html>
