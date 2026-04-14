@@ -47,6 +47,9 @@
     <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder gestionar tus ventas de manera eficiente.</p>
     <img src="assets/ventas_mantenimiento.png" alt="">
     <br>
+    <h3>9. Configuración de la Tienda</h3>
+    <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder configurar tu tienda de manera eficiente.</p>
+    <img src="assets/tienda_mantenimiento.png" alt="">
     <?php include 'footer.php'; ?>
 </body>
 </html>
