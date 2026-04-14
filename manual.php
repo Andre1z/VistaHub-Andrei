@@ -59,6 +59,10 @@
     <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder gestionar a tus proveedores de manera eficiente.</p>
     <img src="assets/proveedores_mantenimiento.png" alt="">
     <br>
+    <h3>12. Acerca de Vista Hub</h3>
+    <p>En esta sección podrás encontrar información sobre la empresa y su misión.</p>
+    <img src="assets/acerca_de.png" alt="">
+    <br>
     <?php include 'footer.php'; ?>
 </body>
 </html>
