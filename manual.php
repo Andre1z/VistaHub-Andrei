@@ -31,6 +31,10 @@
     <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder gestionar tu flota de manera eficiente.</p>
     <img src="assets/logistica_mantenimiento.png" alt="">
     <br>
+    <h3>5. Gestión de los empleados</h3>
+    <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder gestionar a tus empleados de manera eficiente.</p>
+    <img src="assets/empleados_mantenimiento.png" alt="">
+    <br>
     <?php include 'footer.php'; ?>
 </body>
 </html>
