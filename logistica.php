@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <h2>Logistica</h2>
+    <h2>Logística</h2>
     <p>⚠️EN MANTENIMIENTO⚠️</p>
     <?php include 'footer.php'; ?>
 </body>

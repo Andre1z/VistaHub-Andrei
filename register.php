@@ -18,9 +18,9 @@
         <input type="text" id="DOMICILIO" name="DOMICILIO" required><br>
         <label for="MUNICIPIO">Municipio:</label><br>
         <input type="text" id="MUNICIPIO" name="MUNICIPIO" required><br>
-        <label for="CP">Codigo Postal:</label><br>
+        <label for="CP">Código Postal:</label><br>
         <input type="text" id="CP" name="CP" required><br>
-        <label for="PAIS">Pais:</label><br>
+        <label for="PAIS">País:</label><br>
         <input type="text" id="PAIS" name="PAIS" required><br>
         <label for="email">Correo Electrónico:</label><br>
         <input type="email" id="email" name="email" required><br><br>
