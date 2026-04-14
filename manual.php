@@ -63,6 +63,10 @@
     <p>En esta sección podrás encontrar información sobre la empresa y su misión.</p>
     <img src="assets/acerca_de.png" alt="">
     <br>
+    <h3>13. Contacto</h3>
+    <p>En esta sección podrá contactar con el equipo de soporte de Vista Hub mediante el formulario de la misma pagina.</p>
+    <img src="assets/contacto.png" alt="">
+    <br>
     <?php include 'footer.php'; ?>
 </body>
 </html>
