@@ -26,6 +26,11 @@
     <h3>3. Gestión de Almacén</h3>
     <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder gestionar tu almacén de manera eficiente.</p>
     <img src="assets/almacen_mantenimiento.png" alt="">
+    <br>
+    <h3>4. Gestión de Logística</h3>
+    <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder gestionar tu flota de manera eficiente.</p>
+    <img src="assets/logistica_mantenimiento.png" alt="">
+    <br>
     <?php include 'footer.php'; ?>
 </body>
 </html>
