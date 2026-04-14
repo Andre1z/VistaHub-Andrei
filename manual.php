@@ -43,6 +43,10 @@
     <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder gestionar tus compras de manera eficiente.</p>
     <img src="assets/compras_mantenimiento.png" alt="">
     <br>
+    <h3>8. Gestión de Ventas</h3>
+    <p>En esta sección tendrás a disposición todas las herramientas necesarias para poder gestionar tus ventas de manera eficiente.</p>
+    <img src="assets/ventas_mantenimiento.png" alt="">
+    <br>
     <?php include 'footer.php'; ?>
 </body>
 </html>
