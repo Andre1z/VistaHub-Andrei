@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="css/general.css">
+<link rel="stylesheet" href="css/manual.css">
 <h3>1. Registro e Inicio de Sesión</h3>
 <p>Para comenzar a utilizar Vista Hub, primero debes registrarte. Haz clic en el botón "Registrarse" en la esquina superior derecha de la página de inicio. Completa el formulario con los datos requeridos. Una vez enviado el formulario se debera esperar un rato para que se validen los datos y le enviemos un correo con la contraseña temporal despues, podrá iniciar sesión con tus credenciales.</p>
 <img src="assets/registro_aqui.png" alt="Registro" height="600px" width="390px">
