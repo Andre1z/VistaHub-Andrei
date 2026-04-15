@@ -9,9 +9,11 @@
         header("Location: login.php");
         exit();
     }
+
+    require_once 'i18n.php';
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="<?php echo htmlspecialchars($GLOBALS['idiomaActivo'], ENT_QUOTES, 'UTF-8'); ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +23,8 @@
     <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
 <body>
-    <h1>Te damos la Bienvenida a Vista Hub</h1>
-    <h2>Menú Principal</h2>
+    <h1><?php echo __('welcome'); ?></h1>
+    <h2><?php echo __('main_menu'); ?></h2>
     <div class="flex">
         <?php include 'main.php'; ?>
         <?php include 'footer.php'; ?>

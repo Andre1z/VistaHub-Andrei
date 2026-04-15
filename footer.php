@@ -1,3 +1,4 @@
+<?php require_once 'i18n.php'; ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
 <link rel="stylesheet" href="css/footer.css">
 <footer>
@@ -32,17 +33,17 @@
             <p>© 2026 VistaHub. Todos los derechos reservados. El contenido de este sitio web es propiedad de VistaHub y está protegido por las leyes de propiedad intelectual. Queda prohibida la reproducción total o parcial sin autorización previa. VistaHub no se hace responsable por el uso indebido de la información aquí contenida. Para consultas legales o privacidad, contáctanos</p>
         </section>
         <section id="seccion4">
-            <h3>Seleccion de Idiomas</h3>
-            <button id ="gb"><span class="fi fi-gb"></span></button>
-            <button id ="fr"><span class="fi fi-fr"></span></button>
-            <button id ="es"><span class="fi fi-es"></span></button>
-            <button id ="pt"><span class="fi fi-pt"></span></button>
-            <button id ="de"><span class="fi fi-de"></span></button>
-            <button id ="it"><span class="fi fi-it"></span></button>
-            <button id ="pl"><span class="fi fi-pl"></span></button>
-            <button id ="gr"><span class="fi fi-gr"></span></button>
-            <button id ="ru"><span class="fi fi-ru"></span></button>
-            <button id ="sa"><span class="fi fi-sa"></span></button>
+            <h3><?php echo __('language_selection'); ?></h3>
+            <button id="en"><span class="fi fi-gb"></span></button>
+            <button id="fr"><span class="fi fi-fr"></span></button>
+            <button id="es"><span class="fi fi-es"></span></button>
+            <button id="pt"><span class="fi fi-pt"></span></button>
+            <button id="de"><span class="fi fi-de"></span></button>
+            <button id="it"><span class="fi fi-it"></span></button>
+            <button id="pl"><span class="fi fi-pl"></span></button>
+            <button id="el"><span class="fi fi-gr"></span></button>
+            <button id="ru"><span class="fi fi-ru"></span></button>
+            <button id="ar"><span class="fi fi-sa"></span></button>
         </section>
     </menu>
     <script src="scr/footer.js"></script>

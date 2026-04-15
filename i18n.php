@@ -1,15 +1,19 @@
 <?php
-function obtenerTraducciones($idioma = 'es') {
+function validarIdioma($idioma) {
+    $idiomasValidos = ['en', 'es', 'fr', 'de', 'ru', 'pt', 'it', 'pl', 'el', 'ar'];
+    return in_array($idioma, $idiomasValidos) ? $idioma : 'es';
+}
+
+function obtenerTraducciones() {
     $traducciones = array();
-    // Se intenta abrir el archivo CSV con las traducciones.
     if (($archivo = fopen("translations.csv", "r")) !== false) {
-        // Se lee la primera línea para descartar los encabezados
         $cabecera = fgetcsv($archivo, 1000, ",");
-        // Se procesan cada línea del archivo
         while (($linea = fgetcsv($archivo, 1000, ",")) !== false) {
-            $clave = $linea[0];
-            $traducciones[$clave] = array(
-                'gb' => $linea[1],
+            if (!isset($linea[0])) {
+                continue;
+            }
+            $traducciones[$linea[0]] = array(
+                'en' => $linea[1],
                 'es' => $linea[2],
                 'fr' => $linea[3],
                 'de' => $linea[4],
@@ -17,8 +21,8 @@ function obtenerTraducciones($idioma = 'es') {
                 'pt' => $linea[6],
                 'it' => $linea[7],
                 'pl' => $linea[8],
-                'gr' => $linea[9],
-                'sa' => $linea[10]
+                'el' => $linea[9],
+                'ar' => $linea[10]
             );
         }
         fclose($archivo);
@@ -26,14 +30,13 @@ function obtenerTraducciones($idioma = 'es') {
     return $traducciones;
 }
 
-// Determina el idioma activo a partir de la sesión; si no está definido, se usa español ('es').
-if (isset($_SESSION['language'])) {
-    $idiomaActivo = $_SESSION['language'];
-} else {
-    $idiomaActivo = 'es';
+$idiomaActivo = 'es';
+if (isset($_COOKIE['language'])) {
+    $idiomaActivo = validarIdioma($_COOKIE['language']);
 }
+
 $GLOBALS['idiomaActivo'] = $idiomaActivo;
-$GLOBALS['conjuntoTraducciones'] = obtenerTraducciones($idiomaActivo);
+$GLOBALS['conjuntoTraducciones'] = obtenerTraducciones();
 
 function __($clave) {
     if (isset($GLOBALS['conjuntoTraducciones'][$clave][$GLOBALS['idiomaActivo']])) {

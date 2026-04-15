@@ -1,3 +1,4 @@
+<?php require_once 'i18n.php'; ?>
 <link rel ="stylesheet" type="text/css" href="css/header.css">
 <header>
     <nav>
