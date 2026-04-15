@@ -1,0 +1,103 @@
+/* Manual de Usuario - Vista Hub */
+body {
+    background-color: #eef2f7;
+}
+
+.manual-content {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+}
+
+.manual-content h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #14213d;
+}
+
+.manual-content p {
+    color: #3c4b6d;
+    font-size: 16px;
+    line-height: 1.75;
+    margin: 0 auto 30px;
+    max-width: 860px;
+}
+
+.manual-content h3 {
+    font-size: 22px;
+    color: #1f4068;
+    margin-top: 38px;
+    margin-bottom: 14px;
+}
+
+.manual-content h3:first-of-type {
+    margin-top: 0;
+}
+
+.manual-content p + img,
+.manual-content p + .manual-images,
+.manual-content h3 + img,
+.manual-content h3 + .manual-images {
+    margin-top: 18px;
+}
+
+.manual-image-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.manual-image-row img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 18px 40px rgba(19, 35, 58, 0.08);
+    border: 1px solid rgba(31, 44, 61, 0.08);
+    object-fit: cover;
+}
+
+.manual-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 16px 32px rgba(23, 42, 78, 0.08);
+    border: 1px solid rgba(31, 44, 61, 0.08);
+}
+
+.manual-content p {
+    margin-bottom: 24px;
+}
+
+.manual-content br {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .manual-content {
+        padding: 30px 18px 60px;
+    }
+
+    .manual-content h2 {
+        font-size: 28px;
+    }
+
+    .manual-content h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .manual-content {
+        padding: 22px 14px 50px;
+    }
+
+    .manual-content p {
+        font-size: 15px;
+    }
+
+    .manual-content h3 {
+        font-size: 18px;
+    }
+}
