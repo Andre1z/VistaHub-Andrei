@@ -5,10 +5,10 @@
     }
 
     // Verificamos si el usuario ha iniciado sesión
-    /*if (!isset($_SESSION['user_id'])) {
+    if (!isset($_SESSION['user_id'])) {
         header("Location: login.php");
         exit();
-    }*/
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es">
