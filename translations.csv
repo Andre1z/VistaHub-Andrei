@@ -38,4 +38,8 @@ postal_code,Postal Code,Código Postal,Code Postal,Postleitzahl,Почтовый
 municipality,Municipality,Municipio,Municipalité,Gemeinde,Муниципалитет,Município,Municipalità,Gmina,Δήμος,البلدية
 country,Country,País,Pays,Land,Страна,País,Paese,Kraj,Χώρα,البلد
 logout,Logout,Salir,Déconnexion,Abmelden,Выйти,Sair,Esci,Wyloguj się,Αποσύνδεση,تسجيل الخروج
+products,Products,Productos,Produits,Produkte,Товары,Produtos,Prodotti,Produkty,Προϊόντα,منتجات
+suppliers,Suppliers,Proveedores,Fournisseurs,Lieferanten,Поставщики,Fornecedores,Fornitori,Dostawcy,Προμηθευτές,الموردون
+clients,Clients,Clientes,Clients,Kunden,Клиенты,Clientes,Clienti,Klienci,Πελάτες,العملاء
+manual,Manual,Manual,Manuel,Handbuch,Руководство,Manual,Manuale,Podręcznik,Εγχειρίδιο,دليل
 register_request,Registration Request,Solicitud de Registro,Demande d'inscription,Registrierungsanfrage,Запрос на регистрацию,Pedido de registro,Richiesta di registrazione,Prośba o rejestrację,Αίτηση εγγραφής,طلب التسجيل
