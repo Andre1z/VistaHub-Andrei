@@ -22,3 +22,20 @@ submit_registration,Submit Registration,Enviar Solicitud de Registro,Envoyer l'i
 pending_requests,Pending Registration Requests,Solicitudes de Registro Pendientes,Requêtes d'inscription en attente,Ausstehende Registrierungsanfragen,Ожидающие регистрации,Pedidos de registro pendentes,Richieste di registrazione in sospeso,Oczekujące prośby o rejestrację,Εκκρεμείς αιτήσεις εγγραφής,طلبات التسجيل المعلقة
 approve,Approve,Aprobar,Approuver,Genehmigen,Одобрить,Aprovar,Approvare,Zatwierdź,Έγκριση,وافق
 reject,Reject,Rechazar,Rejeter,Ablehnen,Отклонить,Rejeitar,Respinge,Rozrzuć,Απόρριψη,رفض
+home,Home,Inicio,Accueil,Zuhause,Главная,Início,Home,Dom,Αρχική,الرئيسية
+about_us,About Us,Acerca de,À propos,Über uns,О нас,Sobre nós,Informazioni,O nas,Σχετικά με,معلومات عنا
+user_manual,User Manual,Manual de Usuario,Manuel de l'utilisateur,Benutzerhandbuch,Руководство пользователя,Manual do Usuário,Manuale utente,Podręcznik użytkownika,Εγχειρίδιο χρήστη,دليل المستخدم
+privacy_policy,Privacy Policy,Política de Privacidad,Politique de confidentialité,Datenschutz,Политика конфиденциальности,Política de Privacidade,Informativa sulla privacy,Polityka prywatności,Πολιτική απορρήτου,سياسة الخصوصية
+contact_us,Contact Us,Contáctanos,Contactez-nous,Kontaktiere uns,Свяжитесь с нами,Contacte-nos,Contattaci,Skontaktuj się,Να επικοινωνήσετε μαζί μας,اتصل بنا
+name,Name,Nombre,Nom,Name,Имя,Nome,Nome,Imię,Όνομα,الاسم
+phone,Phone,Teléfono,Téléphone,Telefon,Телефон,Telefone,Telefono,Telefon,Τηλέφωνο,الهاتف
+message,Message,Mensaje,Message,Nachricht,Сообщение,Mensagem,Messaggio,Wiadomość,Μήνυμα,رسالة
+send,Send,Enviar,Envoyer,Senden,Отправить,Enviar,Invia,Wysłać,Αποστολή,إرسال
+email_address,Email Address,Correo Electrónico,Adresse e-mail,E-Mail-Adresse,Адрес электронной почты,Endereço de email,Indirizzo email,Adres e-mail,Διεύθυνση email,عنوان البريد الإلكتروني
+company_name,Company Name,Nombre o Razón Social,Nom de l'entreprise,Firmenname,Название компании,Nome da empresa,Nome dell'azienda,Nazwa firmy,Όνομα εταιρείας,اسم الشركة
+address,Address,Domicilio,Adresse,Adresse,Адрес,Endereço,Indirizzo,Adres,Διεύθυνση,العنوان
+postal_code,Postal Code,Código Postal,Code Postal,Postleitzahl,Почтовый индекс,Código postal,Codice postale,Kod pocztowy,ΤΚ,الرمز البريدي
+municipality,Municipality,Municipio,Municipalité,Gemeinde,Муниципалитет,Município,Municipalità,Gmina,Δήμος,البلدية
+country,Country,País,Pays,Land,Страна,País,Paese,Kraj,Χώρα,البلد
+logout,Logout,Salir,Déconnexion,Abmelden,Выйти,Sair,Esci,Wyloguj się,Αποσύνδεση,تسجيل الخروج
+register_request,Registration Request,Solicitud de Registro,Demande d'inscription,Registrierungsanfrage,Запрос на регистрацию,Pedido de registro,Richiesta di registrazione,Prośba o rejestrację,Αίτηση εγγραφής,طلب التسجيل
