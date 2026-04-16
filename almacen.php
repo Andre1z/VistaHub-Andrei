@@ -27,6 +27,7 @@
                     <th>Ubicación</th>
                     <th>Observaciones</th>
                     <th>Fecha de Actualización</th>
+                    <th>Acciones</th>
                 </tr>
             <?php while ($row = $result->fetch_assoc()): ?>
                 <tr>
@@ -36,6 +37,10 @@
                     <td><?php echo $row['ubicacion']; ?></td>
                     <td><?php echo $row['observaciones']; ?></td>
                     <td><?php echo $row['fecha_actualizacion']; ?></td>
+                    <td>
+                        <button class="editar-btn" onclick="editarAlmacen(<?php echo $row['id']; ?>)"><img src="assets/editar.svg" alt="Editar"></button>
+                        <button class="eliminar-btn" onclick="eliminarAlmacen(<?php echo $row['id']; ?>)" onclick="return confirm('¿Eliminar esta columna?')"><img src="assets/eliminar.svg" alt="Eliminar"></button>
+                    </td>
                 </tr>
             <?php endwhile; ?>
             </table>
