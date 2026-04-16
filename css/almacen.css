@@ -9,8 +9,75 @@ h2{
         font-size: 24px !important;
     }
 }
+.tabla-almacen-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin: 1.5rem auto 2rem;
+    padding: 0 1rem;
+}
 
-@media (max-width: 480px) {
+.tabla-almacen {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.tabla-almacen th,
+.tabla-almacen td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    color: #333333;
+}
+
+.tabla-almacen th {
+    background: #1e73be;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.95rem;
+}
+
+.tabla-almacen tr:nth-child(even) {
+    background: #f7f9fc;
+}
+
+.tabla-almacen tr:hover {
+    background: rgba(30, 115, 190, 0.08);
+}
+
+.tabla-almacen td {
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .tabla-almacen {
+        min-width: 600px;
+    }
+
+    .tabla-almacen th,
+    .tabla-almacen td {
+        padding: 12px 12px;
+        font-size: 0.93rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .tabla-almacen {
+        min-width: 520px;
+    }
+
+    .tabla-almacen th,
+    .tabla-almacen td {
+        padding: 10px 10px;
+        font-size: 0.88rem;
+    }
+}@media (max-width: 480px) {
     h2 {
         font-size: 20px !important;
     }
