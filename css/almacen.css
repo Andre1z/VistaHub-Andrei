@@ -59,6 +59,12 @@ h2{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.tabla-almacen td img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
+}
+
 @media (max-width: 768px) {
     .tabla-almacen {
         min-width: 600px;
