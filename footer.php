@@ -8,10 +8,10 @@
             <img src="assets/vistahub.png" alt="vistahub" height="65px" width="165px">
             <span class="fi fi-es"></span>
             <span class="fi fi-eu"></span>
-            <p>Email: <a href="mailto:info@vistahub.com">info@vistahub.com</a></p>
-            <p>Teléfono: <a href="tel:+34911234567">+34 911 23 45 67</a></p>
-            <p>Dirección: <br>C/ de Caracas, 21 - 28010 Madrid</p>
-            <p>Horario de Atención: <br>Lunes a Viernes, 9:00 - 18:00</p>
+            <p><?php echo __('footer_email_label'); ?> <a href="mailto:info@vistahub.com">info@vistahub.com</a></p>
+            <p><?php echo __('footer_phone_label'); ?> <a href="tel:+34911234567">+34 911 23 45 67</a></p>
+            <p><?php echo __('footer_address_label'); ?> <br><?php echo __('footer_address_value'); ?></p>
+            <p><?php echo __('footer_hours_label'); ?> <br><?php echo __('footer_hours_value'); ?></p>
         </section>
         <section id="seccion2">
             <h3><?php echo __('social_networks'); ?></h3>
@@ -30,7 +30,7 @@
         </section>
         <section id="seccion3">
             <h3><?php echo __('legal_notice'); ?></h3>
-            <p>© 2026 VistaHub. Todos los derechos reservados. El contenido de este sitio web es propiedad de VistaHub y está protegido por las leyes de propiedad intelectual. Queda prohibida la reproducción total o parcial sin autorización previa. VistaHub no se hace responsable por el uso indebido de la información aquí contenida. Para consultas legales o privacidad, contáctanos</p>
+            <p><?php echo __('footer_legal_text'); ?></p>
         </section>
         <section id="seccion4">
             <h3><?php echo __('language_selection'); ?></h3>
