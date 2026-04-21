@@ -1,0 +1,94 @@
+h2{
+    text-align: center;
+    font-size:30px !important;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 24px !important;
+    }
+}
+.tabla-productos-contenedor {
+    width: 100%;
+    max-width: 1080px;
+    overflow-x: auto;
+    margin: 1.5rem auto 2rem;
+    padding: 0 1rem;
+}
+
+.tabla-productos {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.tabla-productos th,
+.tabla-productos td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    color: #333333;
+}
+
+.tabla-productos th {
+    background: #48535f;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.95rem;
+}
+
+.tabla-productos tr:nth-child(even) {
+    background: #f7f9fc;
+}
+
+.tabla-productos tr:hover {
+    background: rgba(30, 115, 190, 0.08);
+}
+
+.tabla-productos td {
+    vertical-align: middle;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tabla-productos td img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
+}
+
+@media (max-width: 768px) {
+    .tabla-productos {
+        min-width: 600px;
+    }
+
+    .tabla-productos th,
+    .tabla-productos td {
+        padding: 12px 12px;
+        font-size: 0.93rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .tabla-productos {
+        min-width: 520px;
+    }
+
+    .tabla-productos th,
+    .tabla-productos td {
+        padding: 10px 10px;
+        font-size: 0.88rem;
+    }
+}@media (max-width: 480px) {
+    h2 {
+        font-size: 20px !important;
+    }
+}
