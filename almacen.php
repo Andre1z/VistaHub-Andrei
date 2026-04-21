@@ -18,7 +18,6 @@
     <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/almacen.css">
-    <link rel="stylesheet" type="text/css" href="css/modal.css">
 </head>
 <body>
     <?php include 'header.php'; ?>
@@ -69,7 +68,7 @@
         <p><?php echo __('warehouse_maintenance_notice'); ?></p>
     <?php endif; ?>
     
-    <?php include 'modal.php'; ?>
+    <?php include 'modal_almacen.php'; ?>
     
     <?php include 'footer.php'; ?>
     
