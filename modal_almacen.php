@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="modal.css">
+<link rel="stylesheet" href="css/modal.css">
 <!-- Modal para agregar registro -->
 <div id="modalAgregar" class="modal">
     <div class="modal-content">
