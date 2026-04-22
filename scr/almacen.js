@@ -44,11 +44,12 @@ function abrirModalCrearProducto() {
 
 function generarCodigoProducto() {
     // Obtener el próximo código del servidor
-    fetch('back/crear_producto.php')
+    fetch('back/generar_codigo_producto.php')
         .then(response => response.json())
         .then(data => {
             if (data.success) {
                 document.getElementById('codigo').value = data.codigo;
+                document.getElementById('codigo_display').value = data.codigo;
             } else {
                 console.error('Error al generar código:', data.message);
             }
@@ -61,6 +62,8 @@ function generarCodigoProducto() {
 function cerrarModalCrearProducto() {
     document.getElementById('modalCrearProducto').style.display = 'none';
     document.getElementById('formCrearProducto').reset();
+    document.getElementById('codigo').value = '';
+    document.getElementById('codigo_display').value = '';
 }
         
 function insertarAlmacen(event) {

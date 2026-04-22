@@ -7,6 +7,11 @@
         </div>
         <form id="formCrearProducto" onsubmit="crearProducto(event)">
             <input type="hidden" id="codigo" name="codigo">
+            
+            <div class="form-group">
+                <label for="codigo_display">Código del Producto *</label>
+                <input type="text" id="codigo_display" name="codigo_display" required placeholder="Ej: P-0000001" readonly style="background-color: #f0f0f0; cursor: not-allowed;">
+            </div>
                 
             <div class="form-group">
                 <label for="nombre">Nombre del Producto *</label>
