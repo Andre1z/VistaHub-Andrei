@@ -57,7 +57,7 @@
                     <td><?php echo $row['observaciones']; ?></td>
                     <td><?php echo $row['fecha_actualizacion']; ?></td>
                     <td>
-                        <button class="editar-btn" onclick="editarAlmacen(<?php echo $row['id']; ?>)"><img src="assets/editar.svg" alt="<?php echo __('edit'); ?>"></button>
+                        <button class="editar-btn" onclick="abrirModalEditarAlmacen(<?php echo $row['id']; ?>)"><img src="assets/editar.svg" alt="<?php echo __('edit'); ?>"></button>
                         <button class="eliminar-btn" onclick="return confirm('<?php echo __('warehouse_delete_confirm'); ?>') && eliminarAlmacen(<?php echo $row['id']; ?>)"><img src="assets/eliminar.svg" alt="<?php echo __('delete'); ?>"></button>
                     </td>
                 </tr>
