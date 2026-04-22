@@ -32,7 +32,7 @@
                 
             <div class="form-group">
                 <label for="ubicacion">Ubicación *</label>
-                <input type="text" id="ubicacion" name="ubicacion" required placeholder="Ej: Pasillo A, Estante 3">
+                <input type="text" id="ubicacion" name="ubicacion" required placeholder="Ej: Barcelona, Madrid, Valencia...">
             </div>
                 
             <div class="form-group">
