@@ -24,8 +24,8 @@ $rowMaxId = $resultMaxId->fetch_assoc();
 // El próximo ID será el máximo + 1
 $proximoId = ($rowMaxId['max_id'] !== null ? $rowMaxId['max_id'] : 0) + 1;
 
-// Generar código con formato PROD-00000XXX
-$codigoProximo = 'PROD-' . str_pad($proximoId, 5, '0', STR_PAD_LEFT);
+// Generar código con formato P-0000001 (9 caracteres totales)
+$codigoProximo = 'P-' . str_pad($proximoId, 7, '0', STR_PAD_LEFT);
 
 echo json_encode([
     'success' => true,

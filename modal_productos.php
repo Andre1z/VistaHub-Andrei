@@ -10,7 +10,7 @@
         <form id="formAgregarProducto" onsubmit="insertarProducto(event)">
             <div class="form-group">
                 <label for="codigo">Código del Producto *</label>
-                <input type="text" id="codigo" name="codigo" required placeholder="Ej: PROD-001" readonly style="background-color: #f0f0f0; cursor: not-allowed;">
+                <input type="text" id="codigo" name="codigo" required placeholder="Ej: P-0000001" readonly style="background-color: #f0f0f0; cursor: not-allowed;">
             </div>
             
             <div class="form-group">
@@ -53,7 +53,7 @@
             
             <div class="form-group">
                 <label for="codigo_editar">Código del Producto *</label>
-                <input type="text" id="codigo_editar" name="codigo" required placeholder="Ej: PROD-001" readonly style="background-color: #f0f0f0; cursor: not-allowed;">
+                <input type="text" id="codigo_editar" name="codigo" required placeholder="Ej: P-0000001" readonly style="background-color: #f0f0f0; cursor: not-allowed;">
             </div>
             
             <div class="form-group">
