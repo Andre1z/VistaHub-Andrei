@@ -87,6 +87,8 @@ function actualizarProducto(event) {
     event.preventDefault();
     
     const formData = new FormData(document.getElementById('formEditarProducto'));
+    // Remover el campo código para que no se actualice
+    formData.delete('codigo');
     
     fetch('back/actualizar_producto.php', {
         method: 'POST',
