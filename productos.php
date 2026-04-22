@@ -17,6 +17,7 @@
 <body>
     <?php include 'header.php'; ?>    
     <h2>Productos</h2>
+    <button class="btn btn-primary" onclick="abrirModalAgregarProducto()" style="margin-bottom: 20px;">+ Agregar Producto</button>
     <?php if ($result->num_rows > 0): ?>
         <div class="tabla-productos-contenedor">
             <table class="tabla-productos">
@@ -38,7 +39,7 @@
                         <td><?php echo $row['precio']; ?>€</td>
                         <td><?php echo $row['iva']; ?>%</td>
                         <td>
-                            <button class="editar-btn" onclick="editarProducto(<?php echo $row['id']; ?>)"><img src="assets/editar.svg" alt="<?php echo __('edit'); ?>"></button>
+                            <button class="editar-btn" onclick="abrirModalEditarProducto(<?php echo $row['id']; ?>)"><img src="assets/editar.svg" alt="<?php echo __('edit'); ?>"></button>
                             <button class="eliminar-btn" onclick="return confirm('<?php echo __('delete_confirm'); ?>') && eliminarProducto(<?php echo $row['id']; ?>)"><img src="assets/eliminar.svg" alt="<?php echo __('delete'); ?>"></button>
                         </td>
                     </tr>
@@ -48,6 +49,8 @@
     <?php else: ?>
         <p>⚠️EN MANTENIMIENTO⚠️</p>
     <?php endif; ?>
+    <?php include 'modal_productos.php'; ?>
     <?php include 'footer.php'; ?>
+    <script src="scr/productos.js"></script>
 </body>
 </html>
