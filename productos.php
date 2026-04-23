@@ -9,26 +9,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vista Hub - Productos</title>
+    <title><?php echo __('products_page_title'); ?></title>
     <link rel="stylesheet" type="text/css" href="css/general.css">
     <link rel="stylesheet" type="text/css" href="css/productos.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
 <body>
     <?php include 'header.php'; ?>    
-    <h2>Productos</h2>
-    <button class="btn btn-primary" onclick="abrirModalAgregarProducto()" style="margin-bottom: 20px;">+ Agregar Producto</button>
+    <h2><?php echo __('products'); ?></h2>
+    <button class="btn btn-primary" onclick="abrirModalAgregarProducto()" style="margin-bottom: 20px;"><?php echo __('add_product'); ?></button>
     <?php if ($result->num_rows > 0): ?>
         <div class="tabla-productos-contenedor">
             <table class="tabla-productos">
                     <tr>
-                        <th>ID</th>
-                        <th>Código</th>
-                        <th>Nombre</th>
-                        <th>Descripción</th>
-                        <th>Precio</th>
-                        <th>IVA</th>
-                        <th>Acciones</th>
+                        <th><?php echo __('id'); ?></th>
+                        <th><?php echo __('code'); ?></th>
+                        <th><?php echo __('name'); ?></th>
+                        <th><?php echo __('description'); ?></th>
+                        <th><?php echo __('price'); ?></th>
+                        <th><?php echo __('iva'); ?></th>
+                        <th><?php echo __('actions'); ?></th>
                     </tr>
             <?php while ($row = $result->fetch_assoc()): ?>
                     <tr>
@@ -47,7 +47,7 @@
             </table>
         </div>
     <?php else: ?>
-        <p>⚠️EN MANTENIMIENTO⚠️</p>
+        <p><?php echo __('maintenance_message'); ?></p>
     <?php endif; ?>
     <?php include 'modal_productos.php'; ?>
     <?php include 'footer.php'; ?>
