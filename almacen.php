@@ -26,16 +26,16 @@
     <?php if (isset($_GET['status'])): ?>
         <?php if ($_GET['status'] === 'success'): ?>
             <div class="alert alert-success">
-                Producto agregado al almacén exitosamente.
+                <?php echo __('product_added_successfully'); ?>
             </div>
         <?php elseif ($_GET['status'] === 'error'): ?>
             <div class="alert alert-error">
-                Error al agregar el producto: <?php echo htmlspecialchars($_GET['message'] ?? 'Error desconocido'); ?>
+                <?php echo __('error_adding_product'); ?> <?php echo htmlspecialchars($_GET['message'] ?? 'Error desconocido'); ?>
             </div>
         <?php endif; ?>
     <?php endif; ?>
     
-    <button class="agregar-btn" onclick="abrirModalAgregar()">+ Agregar Nuevo Registro</button>
+    <button class="agregar-btn" onclick="abrirModalAgregar()"><?php echo __('add_new_warehouse_record'); ?></button>
     <?php if ($result->num_rows > 0): ?>
         <div class="tabla-almacen-contenedor">
             <table class="tabla-almacen">
