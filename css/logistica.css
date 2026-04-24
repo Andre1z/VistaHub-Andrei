@@ -11,7 +11,7 @@ h2{
 }
 .tabla-logistica-contenedor {
     width: 100%;
-    max-width: 1080px;
+    max-width: 1800px;
     overflow-x: auto;
     margin: 1.5rem auto 2rem;
     padding: 0 1rem;
@@ -19,7 +19,7 @@ h2{
 
 .tabla-logistica {
     width: 100%;
-    min-width: 720px;
+    min-width: 1400px;
     border-collapse: collapse;
     background: #ffffff;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
