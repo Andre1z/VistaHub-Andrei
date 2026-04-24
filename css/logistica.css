@@ -54,6 +54,14 @@ h2{
     background: rgba(30, 115, 190, 0.08);
 }
 
+.editar-btn:hover{
+    background: rgba(30, 190, 182, 0.2);
+}
+
+.eliminar-btn:hover{
+    background: rgba(190, 30, 57, 0.2);
+}
+
 .tabla-logistica td {
     vertical-align: middle;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
