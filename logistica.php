@@ -22,13 +22,13 @@
             <table class="tabla-logistica">
                     <tr>
                         <th>id</th>
-                        <th>id_pedido</th>
-                        <th>id_empresa</th>
-                        <th>nombre_empresa</th>
-                        <th>fecha_salida</th>
-                        <th>fecha_entrega_prevista</th>
+                        <th>id del pedido</th>
+                        <th>id de la empresa</th>
+                        <th>nombre de la empresa</th>
+                        <th>fecha de salida</th>
+                        <th>fecha de entrega</th>
                         <th>estado</th>
-                        <th>numero_seguimiento</th>
+                        <th>número de seguimiento</th>
                         <th>origen</th>
                         <th>destino</th>
                         <th>observaciones</th>
