@@ -49,6 +49,10 @@
                         <td><?php echo $row['destino']; ?></td>
                         <td><?php echo $row['observaciones']; ?></td>
                         <td><?php echo $row['incidencias']; ?></td>
+                        <td>
+                            <button class="editar-btn" onclick="abrirModalEditarProducto(<?php echo $row['id']; ?>)"><img src="assets/editar.svg" alt="<?php echo __('edit'); ?>"></button>
+                            <button class="eliminar-btn" onclick="return confirm('<?php echo __('delete_confirm'); ?>') && eliminarProducto(<?php echo $row['id']; ?>)"><img src="assets/eliminar.svg" alt="<?php echo __('delete'); ?>"></button>
+                        </td>
                     </tr>
             <?php endwhile; ?>
             </table>
