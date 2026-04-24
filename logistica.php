@@ -23,12 +23,12 @@
                     <tr>
                         <th>id</th>
                         <th>id del pedido</th>
-                        <th>id de la empresa</th>
-                        <th>nombre de la empresa</th>
-                        <th>fecha de salida</th>
-                        <th>fecha de entrega</th>
+                        <th>id Empresa</th>
+                        <th>Empresa</th>
+                        <th>Salida</th>
+                        <th>Entrega prevista</th>
                         <th>estado</th>
-                        <th>número de seguimiento</th>
+                        <th>nº seguimiento</th>
                         <th>origen</th>
                         <th>destino</th>
                         <th>observaciones</th>
