@@ -59,6 +59,14 @@ h2{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.editar-btn:hover{
+    background: rgba(30, 190, 182, 0.2);
+}
+
+.eliminar-btn:hover{
+    background: rgba(190, 30, 57, 0.2);
+}
+
 .tabla-almacen td img {
     width: 20px;
     height: 20px;
