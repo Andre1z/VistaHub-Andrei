@@ -3,6 +3,14 @@
     require_once 'i18n.php';
     $sql = "SELECT id, id_pedido, id_empresa, nombre_empresa, fecha_salida, fecha_entrega_prevista, estado, numero_seguimiento, origen, destino, observaciones, incidencias FROM logistica";
     $result = $conexion->query($sql);
+    
+    // Obtener lista de empresas para el formulario
+    $sqlEmpresas = "SELECT id, nombre FROM empresas ORDER BY nombre";
+    $resultEmpresas = $conexion->query($sqlEmpresas);
+    
+    // Obtener lista de pedidos para el formulario
+    $sqlPedidos = "SELECT id, fecha_pedido, estado FROM pedidos ORDER BY id";
+    $resultPedidos = $conexion->query($sqlPedidos);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -60,6 +68,11 @@
     <?php else: ?>
         <p><?php echo __('maintenance_message'); ?></p>
     <?php endif; ?>
+    
+    <?php include 'modal_logistica.php'; ?>
+    
     <?php include 'footer.php'; ?>
+    
+    <script src="scr/logistica.js"></script>
 </body>
 </html>
