@@ -9,7 +9,6 @@ $nombre_empresa = $_POST['nombre_empresa'] ?? '';
 $fecha_salida = $_POST['fecha_salida'] ?? '';
 $fecha_entrega_prevista = $_POST['fecha_entrega_prevista'] ?? '';
 $estado = $_POST['estado'] ?? '';
-$numero_seguimiento = $_POST['numero_seguimiento'] ?? '';
 $origen = $_POST['origen'] ?? '';
 $destino = $_POST['destino'] ?? '';
 $observaciones = $_POST['observaciones'] ?? '';
@@ -19,6 +18,22 @@ if (empty($id_pedido) || empty($id_empresa) || empty($nombre_empresa) || empty($
     echo json_encode(['success' => false, 'message' => 'Faltan datos obligatorios']);
     exit;
 }
+
+// Generar número de seguimiento automáticamente
+$sqlMaxNumero = "SELECT numero_seguimiento FROM logistica ORDER BY id DESC LIMIT 1";
+$resultMaxNumero = $conexion->query($sqlMaxNumero);
+
+if ($resultMaxNumero && $resultMaxNumero->num_rows > 0) {
+    $row = $resultMaxNumero->fetch_assoc();
+    $lastNumero = $row['numero_seguimiento'];
+    // Extraer el número del formato NS00000000X
+    $numeroExtraido = (int)substr($lastNumero, 2);
+    $nuevoNumero = $numeroExtraido + 1;
+} else {
+    $nuevoNumero = 1;
+}
+
+$numero_seguimiento = 'NS' . str_pad($nuevoNumero, 8, '0', STR_PAD_LEFT);
 
 $sql = "INSERT INTO logistica (id_pedido, id_empresa, nombre_empresa, fecha_salida, fecha_entrega_prevista, estado, numero_seguimiento, origen, destino, observaciones, incidencias) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 $stmt = $conexion->prepare($sql);

@@ -64,8 +64,8 @@
             </div>
             
             <div class="form-group">
-                <label for="numero_seguimiento_agregar">Número de seguimiento</label>
-                <input type="text" id="numero_seguimiento_agregar" name="numero_seguimiento">
+                <label for="numero_seguimiento_agregar">Número de seguimiento (Generado automáticamente)</label>
+                <input type="text" id="numero_seguimiento_agregar" name="numero_seguimiento" readonly>
             </div>
             
             <div class="form-group">
