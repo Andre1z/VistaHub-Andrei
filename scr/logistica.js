@@ -9,7 +9,6 @@ function abrirModalEditarLogistica(id) {
                 document.getElementById('id_editar').value = data.logistica.id;
                 document.getElementById('pedido_editar').value = data.logistica.id_pedido;
                 document.getElementById('empresa_editar').value = data.logistica.id_empresa;
-                document.getElementById('nombre_empresa_editar').value = data.logistica.nombre_empresa;
                 document.getElementById('fecha_salida_editar').value = data.logistica.fecha_salida;
                 document.getElementById('fecha_entrega_prevista_editar').value = data.logistica.fecha_entrega_prevista;
                 document.getElementById('estado_editar').value = data.logistica.estado;

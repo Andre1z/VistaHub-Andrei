@@ -44,11 +44,6 @@
             </div>
             
             <div class="form-group">
-                <label for="nombre_empresa_agregar">Nombre empresa *</label>
-                <input type="text" id="nombre_empresa_agregar" name="nombre_empresa" required>
-            </div>
-            
-            <div class="form-group">
                 <label for="fecha_salida_agregar">Fecha salida *</label>
                 <input type="date" id="fecha_salida_agregar" name="fecha_salida" required>
             </div>
@@ -60,7 +55,13 @@
             
             <div class="form-group">
                 <label for="estado_agregar">Estado *</label>
-                <input type="text" id="estado_agregar" name="estado" required>
+                <select id="estado_agregar" name="estado" required>
+                    <option value="">Selecciona un estado</option>
+                    <option value="pendiente">Pendiente</option>
+                    <option value="En transito">En tránsito</option>
+                    <option value="entregado">Entregado</option>
+                    <option value="cancelado">Cancelado</option>
+                </select>
             </div>
             
             <div class="form-group">
@@ -135,11 +136,6 @@
             </div>
             
             <div class="form-group">
-                <label for="nombre_empresa_editar"><?php echo __('nombre_empresa'); ?> *</label>
-                <input type="text" id="nombre_empresa_editar" name="nombre_empresa" required>
-            </div>
-            
-            <div class="form-group">
                 <label for="fecha_salida_editar"><?php echo __('fecha_salida'); ?> *</label>
                 <input type="date" id="fecha_salida_editar" name="fecha_salida" required>
             </div>
@@ -151,7 +147,13 @@
             
             <div class="form-group">
                 <label for="estado_editar"><?php echo __('estado'); ?> *</label>
-                <input type="text" id="estado_editar" name="estado" required>
+                <select id="estado_editar" name="estado" required>
+                    <option value="">Selecciona un estado</option>
+                    <option value="pendiente">Pendiente</option>
+                    <option value="En transito">En tránsito</option>
+                    <option value="entregado">Entregado</option>
+                    <option value="cancelado">Cancelado</option>
+                </select>
             </div>
             
             <div class="form-group">

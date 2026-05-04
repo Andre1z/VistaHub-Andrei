@@ -14,7 +14,6 @@ try {
 
     $id_pedido = isset($_POST['id_pedido']) ? trim($_POST['id_pedido']) : '';
     $id_empresa = isset($_POST['id_empresa']) ? trim($_POST['id_empresa']) : '';
-    $nombre_empresa = isset($_POST['nombre_empresa']) ? trim($_POST['nombre_empresa']) : '';
     $fecha_salida = isset($_POST['fecha_salida']) ? trim($_POST['fecha_salida']) : '';
     $fecha_entrega_prevista = isset($_POST['fecha_entrega_prevista']) ? trim($_POST['fecha_entrega_prevista']) : '';
     $estado = isset($_POST['estado']) ? trim($_POST['estado']) : '';
@@ -23,9 +22,25 @@ try {
     $observaciones = isset($_POST['observaciones']) ? trim($_POST['observaciones']) : '';
     $incidencias = isset($_POST['incidencias']) ? trim($_POST['incidencias']) : '';
 
-    if (empty($id_pedido) || empty($id_empresa) || empty($nombre_empresa) || empty($fecha_salida) || empty($fecha_entrega_prevista) || empty($estado)) {
+    if (empty($id_pedido) || empty($id_empresa) || empty($fecha_salida) || empty($fecha_entrega_prevista) || empty($estado)) {
         throw new Exception('Faltan datos obligatorios');
     }
+
+    // Obtener el nombre de la empresa desde la base de datos
+    $sqlEmpresa = "SELECT nombre FROM empresas WHERE id = ?";
+    $stmtEmpresa = $conexion->prepare($sqlEmpresa);
+    if (!$stmtEmpresa) {
+        throw new Exception('Error en la consulta de empresa: ' . $conexion->error);
+    }
+    $stmtEmpresa->bind_param("i", $id_empresa);
+    $stmtEmpresa->execute();
+    $resultEmpresa = $stmtEmpresa->get_result();
+    if ($resultEmpresa->num_rows == 0) {
+        throw new Exception('Empresa no encontrada');
+    }
+    $empresa = $resultEmpresa->fetch_assoc();
+    $nombre_empresa = $empresa['nombre'];
+    $stmtEmpresa->close();
 
     // Generar número de seguimiento automáticamente
     $sqlMaxNumero = "SELECT numero_seguimiento FROM logistica ORDER BY id DESC LIMIT 1";
