@@ -1,29 +1,42 @@
 function abrirModalEditarLogistica(id) {
     document.getElementById('modalEditarLogistica').style.display = 'block';
+    document.getElementById('formEditarLogistica').reset();
     
     // Cargar datos del registro de logística
     fetch('back/obtener_logistica.php?id=' + id)
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                document.getElementById('id_editar').value = data.logistica.id;
-                document.getElementById('pedido_editar').value = data.logistica.id_pedido;
-                document.getElementById('empresa_editar').value = data.logistica.id_empresa;
-                document.getElementById('fecha_salida_editar').value = data.logistica.fecha_salida;
-                document.getElementById('fecha_entrega_prevista_editar').value = data.logistica.fecha_entrega_prevista;
-                document.getElementById('estado_editar').value = data.logistica.estado;
-                document.getElementById('origen_editar').value = data.logistica.origen;
-                document.getElementById('destino_editar').value = data.logistica.destino;
-                document.getElementById('observaciones_editar').value = data.logistica.observaciones;
-                document.getElementById('incidencias_editar').value = data.logistica.incidencias;
-            } else {
-                alert('Error al cargar el registro: ' + data.message);
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error HTTP: ' + response.status);
+            }
+            return response.text();
+        })
+        .then(text => {
+            try {
+                const data = JSON.parse(text);
+                if (data.success) {
+                    document.getElementById('id_editar').value = data.logistica.id;
+                    document.getElementById('pedido_editar').value = data.logistica.id_pedido;
+                    document.getElementById('empresa_editar').value = data.logistica.id_empresa;
+                    document.getElementById('fecha_salida_editar').value = data.logistica.fecha_salida;
+                    document.getElementById('fecha_entrega_prevista_editar').value = data.logistica.fecha_entrega_prevista;
+                    document.getElementById('estado_editar').value = data.logistica.estado;
+                    document.getElementById('origen_editar').value = data.logistica.origen;
+                    document.getElementById('destino_editar').value = data.logistica.destino;
+                    document.getElementById('observaciones_editar').value = data.logistica.observaciones;
+                    document.getElementById('incidencias_editar').value = data.logistica.incidencias;
+                } else {
+                    alert('Error al cargar el registro: ' + data.message);
+                    cerrarModalEditarLogistica();
+                }
+            } catch (e) {
+                console.error('Respuesta del servidor:', text);
+                alert('Error en la comunicación: ' + text);
                 cerrarModalEditarLogistica();
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('Error en la comunicación con el servidor');
+            alert('Error en la comunicación con el servidor: ' + error.message);
             cerrarModalEditarLogistica();
         });
 }
