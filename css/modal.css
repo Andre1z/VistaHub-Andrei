@@ -11,12 +11,18 @@
         
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto;
+    margin: 2% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 500px;
+    width: 600px;
+    overflow-y: auto;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+        
+.modal-logistica .modal-content {
+    height: 115vh;
+    max-height: 91vh;
 }
         
 .modal-header {

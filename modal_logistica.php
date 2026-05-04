@@ -1,8 +1,97 @@
 <?php require_once 'i18n.php'; ?>
 <link rel="stylesheet" href="css/modal.css">
 
+<!-- Modal para agregar registro de logística -->
+<div id="modalAgregarLogistica" class="modal modal-logistica">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Agregar registro de logística</h2>
+            <span class="close" onclick="cerrarModalAgregarLogistica()">&times;</span>
+        </div>
+        <form id="formAgregarLogistica" onsubmit="insertarLogistica(event)">
+            <div class="form-group">
+                <label for="pedido_agregar">Pedido *</label>
+                <select id="pedido_agregar" name="id_pedido" required>
+                    <option value="">Selecciona un pedido</option>
+                    <?php 
+                        $resultPedidos->data_seek(0);
+                        while ($ped = $resultPedidos->fetch_assoc()): ?>
+                            <option value="<?php echo $ped['id']; ?>">
+                                Pedido #<?php echo $ped['id']; ?> - <?php echo $ped['fecha_pedido']; ?> (<?php echo $ped['estado']; ?>)
+                            </option>
+                        <?php endwhile; ?>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="empresa_agregar">Empresa *</label>
+                <select id="empresa_agregar" name="id_empresa" required>
+                    <option value="">Selecciona una empresa</option>
+                    <?php 
+                        $resultEmpresas->data_seek(0);
+                        while ($emp = $resultEmpresas->fetch_assoc()): ?>
+                            <option value="<?php echo $emp['id']; ?>">
+                                <?php echo htmlspecialchars($emp['nombre']); ?> (ID: <?php echo $emp['id']; ?>)
+                            </option>
+                        <?php endwhile; ?>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="nombre_empresa_agregar">Nombre empresa *</label>
+                <input type="text" id="nombre_empresa_agregar" name="nombre_empresa" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="fecha_salida_agregar">Fecha salida *</label>
+                <input type="date" id="fecha_salida_agregar" name="fecha_salida" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="fecha_entrega_prevista_agregar">Fecha entrega prevista *</label>
+                <input type="date" id="fecha_entrega_prevista_agregar" name="fecha_entrega_prevista" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="estado_agregar">Estado *</label>
+                <input type="text" id="estado_agregar" name="estado" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="numero_seguimiento_agregar">Número de seguimiento</label>
+                <input type="text" id="numero_seguimiento_agregar" name="numero_seguimiento">
+            </div>
+            
+            <div class="form-group">
+                <label for="origen_agregar">Origen</label>
+                <input type="text" id="origen_agregar" name="origen">
+            </div>
+            
+            <div class="form-group">
+                <label for="destino_agregar">Destino</label>
+                <input type="text" id="destino_agregar" name="destino">
+            </div>
+            
+            <div class="form-group">
+                <label for="observaciones_agregar">Observaciones</label>
+                <textarea id="observaciones_agregar" name="observaciones"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="incidencias_agregar">Incidencias</label>
+                <textarea id="incidencias_agregar" name="incidencias"></textarea>
+            </div>
+            
+            <div class="button-group">
+                <button type="button" class="btn btn-secondary" onclick="cerrarModalAgregarLogistica()">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Guardar registro</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 <!-- Modal para editar registro de logística -->
-<div id="modalEditarLogistica" class="modal">
+<div id="modalEditarLogistica" class="modal modal-logistica">
     <div class="modal-content">
         <div class="modal-header">
             <h2><?php echo __('edit_logistica'); ?></h2>

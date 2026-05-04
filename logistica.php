@@ -25,7 +25,9 @@
 <body>
     <?php include 'header.php'; ?>
     <h2>Logística</h2>
+    <button class="agregar-btn" onclick="abrirModalAgregarLogistica()">Agregar registro</button>
     <?php if ($result->num_rows > 0): ?>
+
         <div class="tabla-logistica-contenedor">
             <table class="tabla-logistica">
                     <tr>

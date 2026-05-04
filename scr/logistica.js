@@ -30,9 +30,42 @@ function abrirModalEditarLogistica(id) {
         });
 }
 
+function cerrarModalAgregarLogistica() {
+    document.getElementById('modalAgregarLogistica').style.display = 'none';
+    document.getElementById('formAgregarLogistica').reset();
+}
+
 function cerrarModalEditarLogistica() {
     document.getElementById('modalEditarLogistica').style.display = 'none';
     document.getElementById('formEditarLogistica').reset();
+}
+
+function abrirModalAgregarLogistica() {
+    document.getElementById('modalAgregarLogistica').style.display = 'block';
+}
+
+function insertarLogistica(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(document.getElementById('formAgregarLogistica'));
+    
+    fetch('back/agregar_logistica.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            cerrarModalAgregarLogistica();
+            window.location.href = 'logistica.php?status=success';
+        } else {
+            alert('Error al guardar el registro: ' + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error en la comunicación con el servidor');
+    });
 }
 
 function actualizarLogistica(event) {
@@ -83,8 +116,12 @@ function eliminarLogistica(id) {
 
 // Cerrar modal al hacer click fuera de él
 window.onclick = function(event) {
+    const modalAgregar = document.getElementById('modalAgregarLogistica');
     const modalEditar = document.getElementById('modalEditarLogistica');
     
+    if (event.target == modalAgregar) {
+        cerrarModalAgregarLogistica();
+    }
     if (event.target == modalEditar) {
         cerrarModalEditarLogistica();
     }
