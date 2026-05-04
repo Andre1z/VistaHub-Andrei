@@ -65,11 +65,6 @@
             </div>
             
             <div class="form-group">
-                <label for="numero_seguimiento_agregar">Número de seguimiento (Generado automáticamente)</label>
-                <input type="text" id="numero_seguimiento_agregar" name="numero_seguimiento" readonly>
-            </div>
-            
-            <div class="form-group">
                 <label for="origen_agregar">Origen</label>
                 <input type="text" id="origen_agregar" name="origen">
             </div>
@@ -154,11 +149,6 @@
                     <option value="entregado">Entregado</option>
                     <option value="cancelado">Cancelado</option>
                 </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="numero_seguimiento_editar"><?php echo __('numero_seguimiento'); ?></label>
-                <input type="text" id="numero_seguimiento_editar" name="numero_seguimiento">
             </div>
             
             <div class="form-group">

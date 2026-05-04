@@ -56,7 +56,7 @@ try {
         $nuevoNumero = 1;
     }
 
-    $numero_seguimiento = 'NS' . str_pad($nuevoNumero, 8, '0', STR_PAD_LEFT);
+    $numero_seguimiento = 'NS' . str_pad($nuevoNumero, 9, '0', STR_PAD_LEFT);
 
     $sql = "INSERT INTO logistica (id_pedido, id_empresa, nombre_empresa, fecha_salida, fecha_entrega_prevista, estado, numero_seguimiento, origen, destino, observaciones, incidencias) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conexion->prepare($sql);
