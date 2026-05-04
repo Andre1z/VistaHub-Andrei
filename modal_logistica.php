@@ -96,16 +96,16 @@
 <div id="modalEditarLogistica" class="modal modal-logistica">
     <div class="modal-content">
         <div class="modal-header">
-            <h2><?php echo __('edit_logistica'); ?></h2>
+            <h2><?php echo __('Editar Logística'); ?></h2>
             <span class="close" onclick="cerrarModalEditarLogistica()">&times;</span>
         </div>
         <form id="formEditarLogistica" onsubmit="actualizarLogistica(event)">
             <input type="hidden" id="id_editar" name="id">
             
             <div class="form-group">
-                <label for="pedido_editar"><?php echo __('pedido'); ?> *</label>
+                <label for="pedido_editar"><?php echo __('Pedido'); ?> *</label>
                 <select id="pedido_editar" name="id_pedido" required>
-                    <option value=""><?php echo __('select_pedido'); ?></option>
+                    <option value=""><?php echo __('Seleccionar Pedido'); ?></option>
                     <?php 
                         $resultPedidos->data_seek(0);
                         while ($ped = $resultPedidos->fetch_assoc()): ?>
@@ -117,9 +117,9 @@
             </div>
             
             <div class="form-group">
-                <label for="empresa_editar"><?php echo __('empresa'); ?> *</label>
+                <label for="empresa_editar"><?php echo __('Empresa'); ?> *</label>
                 <select id="empresa_editar" name="id_empresa" required>
-                    <option value=""><?php echo __('select_empresa'); ?></option>
+                    <option value=""><?php echo __('Seleccionar Empresa'); ?></option>
                     <?php 
                         $resultEmpresas->data_seek(0);
                         while ($emp = $resultEmpresas->fetch_assoc()): ?>
@@ -131,17 +131,17 @@
             </div>
             
             <div class="form-group">
-                <label for="fecha_salida_editar"><?php echo __('fecha_salida'); ?> *</label>
+                <label for="fecha_salida_editar"><?php echo __('Fecha de Salida'); ?> *</label>
                 <input type="date" id="fecha_salida_editar" name="fecha_salida" required>
             </div>
             
             <div class="form-group">
-                <label for="fecha_entrega_prevista_editar"><?php echo __('fecha_entrega_prevista'); ?> *</label>
+                <label for="fecha_entrega_prevista_editar"><?php echo __('Fecha de Entrega Prevista'); ?> *</label>
                 <input type="date" id="fecha_entrega_prevista_editar" name="fecha_entrega_prevista" required>
             </div>
             
             <div class="form-group">
-                <label for="estado_editar"><?php echo __('estado'); ?> *</label>
+                <label for="estado_editar"><?php echo __('Estado'); ?> *</label>
                 <select id="estado_editar" name="estado" required>
                     <option value="">Selecciona un estado</option>
                     <option value="pendiente">Pendiente</option>
@@ -152,22 +152,22 @@
             </div>
             
             <div class="form-group">
-                <label for="origen_editar"><?php echo __('origen'); ?></label>
+                <label for="origen_editar"><?php echo __('Origen'); ?></label>
                 <input type="text" id="origen_editar" name="origen">
             </div>
             
             <div class="form-group">
-                <label for="destino_editar"><?php echo __('destino'); ?></label>
+                <label for="destino_editar"><?php echo __('Destino'); ?></label>
                 <input type="text" id="destino_editar" name="destino">
             </div>
             
             <div class="form-group">
-                <label for="observaciones_editar"><?php echo __('observaciones'); ?></label>
+                <label for="observaciones_editar"><?php echo __('Observaciones'); ?></label>
                 <textarea id="observaciones_editar" name="observaciones"></textarea>
             </div>
             
             <div class="form-group">
-                <label for="incidencias_editar"><?php echo __('incidencias'); ?></label>
+                <label for="incidencias_editar"><?php echo __('Incidencias'); ?></label>
                 <textarea id="incidencias_editar" name="incidencias"></textarea>
             </div>
             
