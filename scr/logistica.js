@@ -114,15 +114,53 @@ function eliminarLogistica(id) {
     });
 }
 
+function abrirModalCrearPedido() {
+    document.getElementById('modalCrearPedido').style.display = 'block';
+}
+
+function cerrarModalCrearPedido() {
+    document.getElementById('modalCrearPedido').style.display = 'none';
+    document.getElementById('formCrearPedido').reset();
+}
+
+function crearPedido(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(document.getElementById('formCrearPedido'));
+    
+    fetch('back/crear_pedido.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            cerrarModalCrearPedido();
+            // Recargar la página para actualizar el select de pedidos
+            window.location.href = 'logistica.php?status=success';
+        } else {
+            alert('Error al crear el pedido: ' + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error en la comunicación con el servidor');
+    });
+}
+
 // Cerrar modal al hacer click fuera de él
 window.onclick = function(event) {
     const modalAgregar = document.getElementById('modalAgregarLogistica');
     const modalEditar = document.getElementById('modalEditarLogistica');
+    const modalCrearPedido = document.getElementById('modalCrearPedido');
     
     if (event.target == modalAgregar) {
         cerrarModalAgregarLogistica();
     }
     if (event.target == modalEditar) {
         cerrarModalEditarLogistica();
+    }
+    if (event.target == modalCrearPedido) {
+        cerrarModalCrearPedido();
     }
 };
