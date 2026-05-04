@@ -132,19 +132,30 @@ function crearPedido(event) {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            cerrarModalCrearPedido();
-            // Recargar la página para actualizar el select de pedidos
-            window.location.href = 'logistica.php?status=success';
-        } else {
-            alert('Error al crear el pedido: ' + data.message);
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error HTTP: ' + response.status);
+        }
+        return response.text();
+    })
+    .then(text => {
+        try {
+            const data = JSON.parse(text);
+            if (data.success) {
+                cerrarModalCrearPedido();
+                // Recargar la página para actualizar el select de pedidos
+                window.location.href = 'logistica.php?status=success';
+            } else {
+                alert('Error al crear el pedido: ' + data.message);
+            }
+        } catch (e) {
+            console.error('Respuesta del servidor:', text);
+            alert('Error en la comunicación: ' + text);
         }
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('Error en la comunicación con el servidor');
+        alert('Error en la comunicación con el servidor: ' + error.message);
     });
 }
 
@@ -166,19 +177,30 @@ function crearEmpresa(event) {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            cerrarModalCrearEmpresa();
-            // Recargar la página para actualizar el select de empresas
-            window.location.href = 'logistica.php?status=success';
-        } else {
-            alert('Error al crear la empresa: ' + data.message);
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error HTTP: ' + response.status);
+        }
+        return response.text();
+    })
+    .then(text => {
+        try {
+            const data = JSON.parse(text);
+            if (data.success) {
+                cerrarModalCrearEmpresa();
+                // Recargar la página para actualizar el select de empresas
+                window.location.href = 'logistica.php?status=success';
+            } else {
+                alert('Error al crear la empresa: ' + data.message);
+            }
+        } catch (e) {
+            console.error('Respuesta del servidor:', text);
+            alert('Error en la comunicación: ' + text);
         }
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('Error en la comunicación con el servidor');
+        alert('Error en la comunicación con el servidor: ' + error.message);
     });
 }
 
