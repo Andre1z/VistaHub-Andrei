@@ -28,16 +28,19 @@
             
             <div class="form-group">
                 <label for="empresa_agregar">Empresa *</label>
-                <select id="empresa_agregar" name="id_empresa" required>
-                    <option value="">Selecciona una empresa</option>
-                    <?php 
-                        $resultEmpresas->data_seek(0);
-                        while ($emp = $resultEmpresas->fetch_assoc()): ?>
-                            <option value="<?php echo $emp['id']; ?>">
-                                <?php echo htmlspecialchars($emp['nombre']); ?> (ID: <?php echo $emp['id']; ?>)
-                            </option>
-                        <?php endwhile; ?>
-                </select>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <select id="empresa_agregar" name="id_empresa" required>
+                        <option value="">Selecciona una empresa</option>
+                        <?php 
+                            $resultEmpresas->data_seek(0);
+                            while ($emp = $resultEmpresas->fetch_assoc()): ?>
+                                <option value="<?php echo $emp['id']; ?>">
+                                    <?php echo htmlspecialchars($emp['nombre']); ?> (ID: <?php echo $emp['id']; ?>)
+                                </option>
+                            <?php endwhile; ?>
+                    </select>
+                    <button type="button" class="btn btn-secondary" onclick="abrirModalCrearEmpresa()">Crear Empresa</button>
+                </div>
             </div>
             
             <div class="form-group">
@@ -251,6 +254,62 @@
             <div class="button-group">
                 <button type="button" class="btn btn-secondary" onclick="cerrarModalCrearPedido()">Cancelar</button>
                 <button type="submit" class="btn btn-primary">Crear Pedido</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal para crear empresa -->
+<div id="modalCrearEmpresa" class="modal modal-logistica">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Crear Empresa</h2>
+            <span class="close" onclick="cerrarModalCrearEmpresa()">&times;</span>
+        </div>
+        <form id="formCrearEmpresa" onsubmit="crearEmpresa(event)">
+            <div class="form-group">
+                <label for="cif_nif_nie">CIF/NIF/NIE *</label>
+                <input type="text" id="cif_nif_nie" name="cif_nif_nie" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="nombre_empresa">Nombre *</label>
+                <input type="text" id="nombre_empresa" name="nombre" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="domicilio">Domicilio *</label>
+                <input type="text" id="domicilio" name="domicilio" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="municipio">Municipio *</label>
+                <input type="text" id="municipio" name="municipio" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="codigo_postal">Código Postal *</label>
+                <input type="text" id="codigo_postal" name="codigo_postal" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="pais">País *</label>
+                <input type="text" id="pais" name="pais" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefono">Teléfono *</label>
+                <input type="number" id="telefono" name="telefono" required>
+            </div>
+            
+            <div class="button-group">
+                <button type="button" class="btn btn-secondary" onclick="cerrarModalCrearEmpresa()">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Crear Empresa</button>
             </div>
         </form>
     </div>

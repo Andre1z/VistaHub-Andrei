@@ -148,11 +148,46 @@ function crearPedido(event) {
     });
 }
 
+function abrirModalCrearEmpresa() {
+    document.getElementById('modalCrearEmpresa').style.display = 'block';
+}
+
+function cerrarModalCrearEmpresa() {
+    document.getElementById('modalCrearEmpresa').style.display = 'none';
+    document.getElementById('formCrearEmpresa').reset();
+}
+
+function crearEmpresa(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(document.getElementById('formCrearEmpresa'));
+    
+    fetch('back/crear_empresa.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            cerrarModalCrearEmpresa();
+            // Recargar la página para actualizar el select de empresas
+            window.location.href = 'logistica.php?status=success';
+        } else {
+            alert('Error al crear la empresa: ' + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error en la comunicación con el servidor');
+    });
+}
+
 // Cerrar modal al hacer click fuera de él
 window.onclick = function(event) {
     const modalAgregar = document.getElementById('modalAgregarLogistica');
     const modalEditar = document.getElementById('modalEditarLogistica');
     const modalCrearPedido = document.getElementById('modalCrearPedido');
+    const modalCrearEmpresa = document.getElementById('modalCrearEmpresa');
     
     if (event.target == modalAgregar) {
         cerrarModalAgregarLogistica();
@@ -162,5 +197,8 @@ window.onclick = function(event) {
     }
     if (event.target == modalCrearPedido) {
         cerrarModalCrearPedido();
+    }
+    if (event.target == modalCrearEmpresa) {
+        cerrarModalCrearEmpresa();
     }
 };
