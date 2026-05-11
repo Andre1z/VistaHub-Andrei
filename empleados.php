@@ -3,6 +3,8 @@
     require_once 'i18n.php';
     $sql = "SELECT e.id, e.id_empresa, emp.nombre AS empresa_nombre, e.nombre, e.apellidos, e.dni, e.telefono, e.email, e.puesto, e.departamento, e.salario, e.fecha_contratacion, e.estado, e.direccion, e.ciudad, e.codigo_postal, e.created_at FROM empleados e LEFT JOIN empresas emp ON e.id_empresa = emp.id ORDER BY e.id";
     $result = $conexion->query($sql);
+    $sqlEmpresas = "SELECT id, nombre FROM empresas ORDER BY nombre";
+    $resultEmpresas = $conexion->query($sqlEmpresas);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,6 +19,7 @@
 <body>
     <?php include 'header.php'; ?>
     <h2>Empleados</h2>
+    <button class="agregar-btn" onclick="abrirModalAgregarEmpleado()">Agregar empleado</button>
     <?php if ($result && $result->num_rows > 0): ?>
         <div class="tabla-empleados-contenedor">
             <table class="tabla-empleados">
@@ -37,7 +40,7 @@
                     <th>Dirección</th>
                     <th>Ciudad</th>
                     <th>Código postal</th>
-                    <th>Creado</th>
+                    <th>Acciones</th>
                 </tr>
                 <?php while ($row = $result->fetch_assoc()): ?>
                     <tr>
@@ -58,6 +61,10 @@
                         <td><?php echo htmlspecialchars($row['ciudad']); ?></td>
                         <td><?php echo htmlspecialchars($row['codigo_postal']); ?></td>
                         <td><?php echo htmlspecialchars($row['created_at']); ?></td>
+                        <td>
+                            <button class="editar-btn" onclick="abrirModalEditarEmpleado(<?php echo $row['id']; ?>)"><img src="assets/editar.svg" alt="Editar"></button>
+                            <button class="eliminar-btn" onclick="return confirm('¿Eliminar este empleado?') && eliminarEmpleado(<?php echo $row['id']; ?>)"><img src="assets/eliminar.svg" alt="Eliminar"></button>
+                        </td>
                     </tr>
                 <?php endwhile; ?>
             </table>
@@ -65,6 +72,8 @@
     <?php else: ?>
         <p>No hay registros de empleados disponibles.</p>
     <?php endif; ?>
+    <?php include 'modal_empleados.php'; ?>
     <?php include 'footer.php'; ?>
+    <script src="scr/empleados.js"></script>
 </body>
 </html>
